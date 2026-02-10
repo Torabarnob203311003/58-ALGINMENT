@@ -322,8 +322,14 @@
       .hero-content {
         max-width: 1200px;
         margin: 0 auto;
-        position: relative;
+        position :relative;
+        iteams-align: center;
         z-index: 1;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
       }
 
       .hero-badge {
@@ -358,7 +364,8 @@
 
       .hero-buttons {
         display: flex;
-        gap: 15px;
+        justify-content: center;
+        gap: 20px;
         flex-wrap: wrap;
         animation: slideInLeft 0.8s ease 0.6s both;
       }
@@ -371,28 +378,27 @@
         font-size: 16px;
         transition: all 0.3s;
         display: inline-block;
+        text-align: center;
       }
 
-      .hero-button-primary {
+      .hero-button {
         background: var(--secondary);
         color: var(--white);
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        cursor: pointer;
+        display: inline-block;
+        text-align: center;
+        transition: all 0.3s;
       }
 
-      .hero-button-primary:hover {
+      .hero-button:hover {
         background: #ff5520;
         transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(255, 107, 53, 0.4);
-      }
-
-      .hero-button-secondary {
-        background: transparent;
-        color: var(--white);
-        border: 2px solid var(--white);
-      }
-
-      .hero-button-secondary:hover {
-        background: var(--white);
-        color: var(--primary);
+        box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
       }
 
       /* Trust Bar */
@@ -625,6 +631,152 @@
 
       .service-link:hover {
         gap: 10px;
+      }
+
+      /* Call Now Button */
+      .call-now-btn {
+        background: var(--secondary);
+        color: var(--white);
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 16px;
+        transition: all 0.3s;
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-family: 'Work Sans', sans-serif;
+      }
+
+      .call-now-btn:hover {
+        background: #ff5520;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+      }
+
+      /* Call Popup Modal */
+      .call-popup-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 9999;
+        justify-content: center;
+        align-items: center;
+        animation: fadeIn 0.3s ease;
+      }
+
+      .call-popup-overlay.active {
+        display: flex;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .call-popup {
+        background: white;
+        border-radius: 15px;
+        padding: 40px 30px;
+        max-width: 450px;
+        width: 90%;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        position: relative;
+        animation: slideUp 0.4s ease;
+      }
+
+      @keyframes slideUp {
+        from {
+          transform: translateY(50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .call-popup-close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: none;
+        border: none;
+        font-size: 28px;
+        color: #999;
+        cursor: pointer;
+        line-height: 1;
+        transition: color 0.3s;
+      }
+
+      .call-popup-close:hover {
+        color: var(--secondary);
+      }
+
+      .call-popup h3 {
+        font-size: 28px;
+        color: var(--primary);
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      .call-popup p {
+        text-align: center;
+        color: #666;
+        margin-bottom: 30px;
+        font-size: 16px;
+      }
+
+      .call-options {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .call-option {
+        display: block;
+        padding: 18px 20px;
+        background: var(--light);
+        border: 2px solid #e0e0e0;
+        border-radius: 10px;
+        text-decoration: none;
+        color: var(--dark-gray);
+        font-weight: 600;
+        font-size: 16px;
+        transition: all 0.3s;
+        text-align: center;
+      }
+
+      .call-option:hover {
+        background: var(--secondary);
+        color: white;
+        border-color: var(--secondary);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+      }
+
+      .call-option .location {
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+        opacity: 0.8;
+        margin-top: 5px;
+      }
+
+      .call-option .phone {
+        font-size: 20px;
+        font-weight: 700;
+        font-family: 'Rajdhani', sans-serif;
       }
 
       /* Placeholder Image Styles */
@@ -895,6 +1047,38 @@
         .note-item p {
           font-size: 14px;
         }
+
+        /* Mobile popup adjustments */
+        .call-popup {
+          padding: 30px 20px;
+        }
+
+        .call-popup h3 {
+          font-size: 24px;
+        }
+
+        .call-option {
+          padding: 16px 15px;
+        }
+
+        .call-option .phone {
+          font-size: 18px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .call-popup {
+          width: 95%;
+          padding: 25px 15px;
+        }
+
+        .call-popup h3 {
+          font-size: 22px;
+        }
+
+        .call-popup p {
+          font-size: 14px;
+        }
       }
     </style>
   </head>
@@ -921,7 +1105,8 @@
           >
             Visit Us
           </button>
-          <span style="font-size: 16px; font-weight: bold"
+          <span
+            style="font-size: 18px; font-weight: bold; color: var(--dark-gray)"
             >⏰ M-F: 8AM-7PM | Sat-Sun: 8AM-5PM</span
           >
         </div>
@@ -945,7 +1130,8 @@
           >
             Visit Us
           </button>
-          <span style="font-size: 16px; font-weight: bold"
+          <span
+            style="font-size: 18px; font-weight: bold; color: var(--dark-gray)"
             >⏰ M-F: 8AM-7PM | Sat-Sun: 8AM-5PM</span
           >
         </div>
@@ -989,17 +1175,17 @@
     <section class="hero" id="home">
       <div class="hero-content">
         <!-- <span class="hero-badge">🎯 FREE ALIGNMENT CHECK</span> -->
-        <h1>BAKERSFIELD'S MOST <span>AFFORDABLE</span> TRUCK ALIGNMENT</h1>
+        <h1>58 Truck   <span>And Trailer</span> Alignment</h1>
         <p>
           Keep your truck or trailer running straight, safe, and efficient with
           our expert wheel alignment services. Serving Bakersfield, CA & San
           Antonio, TX.
         </p>
         <div class="hero-buttons">
-          <a href="tel:+16614140015" class="hero-button hero-button-primary"
+          <a href="tel:+16614140015" class="hero-button"
             >📞 Call Bakersfield: (661) 414-0015</a
           >
-          <a href="tel:+12102541155" class="hero-button hero-button-secondary"
+          <a href="tel:+12102541155" class="hero-button"
             >📞 Call San Antonio: (210) 254-1155</a
           >
         </div>
@@ -1123,7 +1309,9 @@
               Precision laser alignment for trucks, trailers, RVs, buses, and
               coaches using advanced Hunter equipment.
             </p>
-            <a href="#contact" class="service-link">Learn More →</a>
+            <button class="call-now-btn" onclick="openCallPopup()">
+              Call Now
+            </button>
           </div>
         </div>
 
@@ -1142,7 +1330,9 @@
               Complete suspension inspection, repair, and replacement to ensure
               smooth, safe operation.
             </p>
-            <a href="#contact" class="service-link">Learn More →</a>
+            <button class="call-now-btn" onclick="openCallPopup()">
+              Call Now
+            </button>
           </div>
         </div>
 
@@ -1161,7 +1351,9 @@
               Expert air suspension diagnostics and repair for optimal ride
               quality and load management.
             </p>
-            <a href="#contact" class="service-link">Learn More →</a>
+            <button class="call-now-btn" onclick="openCallPopup()">
+              Call Now
+            </button>
           </div>
         </div>
 
@@ -1180,7 +1372,9 @@
               Professional brake inspection, adjustment, and repair to keep your
               vehicle stopping safely.
             </p>
-            <a href="#contact" class="service-link">Learn More →</a>
+            <button class="call-now-btn" onclick="openCallPopup()">
+              Call Now
+            </button>
           </div>
         </div>
       </div>
@@ -1239,11 +1433,11 @@
         Don't wait for tire wear to get worse. Call now for same-day service!
       </p>
       <div class="cta-buttons">
-        <a href="tel:+16614140015" class="hero-button hero-button-primary"
-          >📞 Bakersfield: (661) 414-0015</a
+        <a href="tel:+16614140015" class="hero-button"
+          >📞 Call Bakersfield: (661) 414-0015</a
         >
-        <a href="tel:+12102541155" class="hero-button hero-button-primary"
-          >📞 San Antonio: (210) 254-1155</a
+        <a href="tel:+12102541155" class="hero-button"
+          >📞 Call San Antonio: (210) 254-1155</a
         >
       </div>
     </section>
@@ -1264,7 +1458,7 @@
             <a href="https://www.instagram.com/58alignments/" target="_blank"
               >Instagram</a
             >
-            <a
+            
               href="https://www.youtube.com/channel/UCCSUwucAzYd33vTpuQZrjXw"
               target="_blank"
               >YouTube</a
@@ -1312,6 +1506,25 @@
     <!-- Sticky Mobile CTA -->
     <div class="sticky-mobile-cta">
       <a href="tel:+16614140015">📞 CALL NOW - BAKERSFIELD</a>
+    </div>
+
+    <!-- Call Popup Modal -->
+    <div class="call-popup-overlay" id="callPopup">
+      <div class="call-popup">
+        <button class="call-popup-close" onclick="closeCallPopup()">&times;</button>
+        <h3>📞 Select Location to Call</h3>
+        <p>Choose which store you'd like to contact</p>
+        <div class="call-options">
+          <a href="tel:+16614140015" class="call-option">
+            <span class="phone">📞 (661) 414-0015</span>
+            <span class="location">Bakersfield, CA</span>
+          </a>
+          <a href="tel:+12102541155" class="call-option">
+            <span class="phone">📞 (210) 254-1155</span>
+            <span class="location">San Antonio, TX</span>
+          </a>
+        </div>
+      </div>
     </div>
 
     <!-- Multi-Location Schema Markup -->
@@ -1462,6 +1675,58 @@
           body.style.overflow = 'auto';
         }
       });
+    </script>
+
+    <!-- Call Popup JavaScript -->
+    <script>
+      function openCallPopup() {
+        document.getElementById('callPopup').classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeCallPopup() {
+        document.getElementById('callPopup').classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+
+      // Close popup when clicking outside the modal
+      document.getElementById('callPopup').addEventListener('click', function(e) {
+        if (e.target === this) {
+          closeCallPopup();
+        }
+      });
+
+      // Close popup on ESC key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          closeCallPopup();
+        }
+      });
+    </script>
+
+    <!-- Fetch dynamic GBP rating -->
+    <script>
+      async function fetchGBPRating() {
+        try {
+          const response = await fetch('https://api.example.com/gbp-rating');
+          const data = await response.json();
+
+          if (data && data.rating) {
+            document.getElementById('gbp-rating').innerText =
+              `${data.rating} ★ (${data.reviewCount} reviews)`;
+          } else {
+            document.getElementById('gbp-rating').innerText =
+              'Rating unavailable';
+          }
+        } catch (error) {
+          console.error('Error fetching GBP rating:', error);
+          document.getElementById('gbp-rating').innerText =
+            'Rating unavailable';
+        }
+      }
+
+      // Call the function on page load
+      window.onload = fetchGBPRating;
     </script>
   </body>
 </html>
