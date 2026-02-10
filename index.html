@@ -1,1339 +1,1467 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>58 Truck & Trailer Alignment | Bakersfield & San Antonio Heavy-Duty Alignment Experts</title>
-    <meta name="description" content="Professional truck and trailer alignment in Bakersfield, CA & San Antonio, TX. $250 truck alignment, $200 trailer. Same-day service. Free alignment check. Call (661) 414-0015 or (210) 254-1155">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      58 Truck & Trailer Alignment | Bakersfield & San Antonio Heavy-Duty
+      Alignment Experts
+    </title>
+    <meta
+      name="description"
+      content="Professional truck and trailer alignment in Bakersfield, CA & San Antonio, TX. $250 truck alignment, $200 trailer. Same-day service. Free alignment check. Call (661) 414-0015 or (210) 254-1155"
+    />
+
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@400;500;600;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@400;500;600;700&family=Rajdhani:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        :root {
-            --primary: #0a1628;
-            --secondary: #ff6b35;
-            --accent: #ffd700;
-            --light: #f4f6f8;
-            --dark-gray: #2d3436;
-            --white: #ffffff;
-        }
-        
-        body {
-            font-family: 'Work Sans', sans-serif;
-            color: var(--dark-gray);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        
-        /* Typography */
-        h1, h2, h3, h4 {
-            font-family: 'Bebas Neue', sans-serif;
-            letter-spacing: 1px;
-        }
-        
-        .accent-text {
-            font-family: 'Rajdhani', sans-serif;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-        
-        /* Header */
-        .top-bar {
-            background: var(--primary);
-            color: var(--white);
-            padding: 15px 0;
-            font-size: 14px;
-        }
-        
-        .top-bar-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-        
-        .location-info {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-        
-        .location-header {
-            font-family: 'Rajdhani', sans-serif;
-            font-weight: 700;
-            font-size: 16px;
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 5px;
-        }
-        
-        .top-bar a {
-            color: var(--white);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 13px;
-        }
-        
-        .top-bar a:hover {
-            color: var(--accent);
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 10px;
-        }
-        
-        /* Main Header */
-        .main-header {
-            background: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-size: 32px;
-            font-weight: bold;
-            color: var(--primary);
-        }
-        
-        .logo span {
-            color: var(--secondary);
-        }
-        
-        /* Desktop Navigation */
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
-        
-        nav a {
-            color: var(--dark-gray);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-        
-        nav a:hover {
-            color: var(--secondary);
-        }
-        
-        .cta-button {
-            background: var(--secondary);
-            color: var(--white);
-            padding: 12px 30px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 700;
-            transition: all 0.3s;
-            display: inline-block;
-        }
-        
-        .cta-button:hover {
-            background: #ff5520;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
-        }
-        
-        /* Mobile Menu Toggle */
-        .mobile-menu-toggle {
-            display: none;
-            flex-direction: column;
-            gap: 6px;
-            cursor: pointer;
-        }
-        
-        .mobile-menu-toggle span {
-            width: 30px;
-            height: 3px;
-            background: var(--primary);
-            transition: 0.3s;
-        }
-        
-        /* Hamburger active state */
-        .mobile-menu-toggle.active span:nth-child(1) {
-            transform: rotate(45deg) translate(10px, 10px);
-        }
-        
-        .mobile-menu-toggle.active span:nth-child(2) {
-            opacity: 0;
-        }
-        
-        .mobile-menu-toggle.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -7px);
-        }
-        
-        /* Desktop nav - shown by default */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary: #0a1628;
+        --secondary: #ff6b35;
+        --accent: #ffd700;
+        --light: #f4f6f8;
+        --dark-gray: #2d3436;
+        --white: #ffffff;
+      }
+
+      body {
+        font-family: 'Work Sans', sans-serif;
+        color: var(--dark-gray);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      /* Typography */
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: 'Bebas Neue', sans-serif;
+        letter-spacing: 1px;
+      }
+
+      .accent-text {
+        font-family: 'Rajdhani', sans-serif;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      /* Header */
+      .top-bar {
+        background: var(--primary);
+        color: var(--white);
+        padding: 15px 0;
+        font-size: 14px;
+      }
+
+      .top-bar-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      .location-info {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .location-header {
+        font-family: 'Rajdhani', sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        color: var(--accent);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 5px;
+      }
+
+      .top-bar a {
+        color: var(--white);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+      }
+
+      .top-bar a:hover {
+        color: var(--accent);
+      }
+
+      .social-links {
+        display: flex;
+        gap: 15px;
+        margin-top: 10px;
+      }
+
+      /* Main Header */
+      .main-header {
+        background: var(--white);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .header-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 32px;
+        font-weight: bold;
+        color: var(--primary);
+      }
+
+      .logo span {
+        color: var(--secondary);
+      }
+
+      /* Desktop Navigation */
+      nav {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 30px;
+      }
+
+      nav a {
+        color: var(--dark-gray);
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s;
+      }
+
+      nav a:hover {
+        color: var(--secondary);
+      }
+
+      .cta-button {
+        background: var(--secondary);
+        color: var(--white);
+        padding: 12px 30px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 700;
+        transition: all 0.3s;
+        display: inline-block;
+      }
+
+      .cta-button:hover {
+        background: #ff5520;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+      }
+
+      /* Mobile Menu Toggle */
+      .mobile-menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 6px;
+        cursor: pointer;
+      }
+
+      .mobile-menu-toggle span {
+        width: 30px;
+        height: 3px;
+        background: var(--primary);
+        transition: 0.3s;
+      }
+
+      /* Hamburger active state */
+      .mobile-menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(10px, 10px);
+      }
+
+      .mobile-menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .mobile-menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+      }
+
+      /* Desktop nav - shown by default */
+      #desktop-nav {
+        display: flex;
+      }
+
+      /* Mobile nav menu - Hidden by default */
+      #mobile-nav {
+        display: none;
+      }
+
+      /* Show mobile nav and hamburger on mobile screens */
+      @media (max-width: 768px) {
         #desktop-nav {
-            display: flex;
-        }
-        
-        /* Mobile nav menu - Hidden by default */
-        #mobile-nav {
-            display: none;
-        }
-        
-        /* Show mobile nav and hamburger on mobile screens */
-        @media (max-width: 768px) {
-            #desktop-nav {
-                display: none;
-            }
-            
-            .mobile-menu-toggle {
-                display: flex;
-            }
-            #mobile-nav {
-                display: block;
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: var(--white);
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height 0.4s ease;
-                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-                z-index: 999;
-                padding-top: 0;
-            }
-            
-            #mobile-nav::before {
-                content: '';
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: rgba(0, 0, 0, 0);
-                pointer-events: none;
-                transition: background 0.4s ease;
-            }
-            
-            #mobile-nav.active::before {
-                background: rgba(0, 0, 0, 0.3);
-                pointer-events: auto;
-            }
-            
-            #mobile-nav.active {
-                max-height: 100vh;
-                overflow-y: auto;
-            }
-            
-            #mobile-nav ul {
-                flex-direction: column;
-                gap: 0;
-                padding: 20px;
-                list-style: none;
-                position: relative;
-                z-index: 1000;
-            }
-            
-            #mobile-nav li {
-                border-bottom: 1px solid #eee;
-                padding: 0;
-                margin: 0;
-            }
-            
-            #mobile-nav li:last-child {
-                border-bottom: none;
-            }
-            
-            #mobile-nav a {
-                color: var(--dark-gray);
-                text-decoration: none;
-                font-weight: 600;
-                display: block;
-                padding: 18px 0;
-                font-size: 18px;
-                transition: color 0.3s;
-            }
-            
-            #mobile-nav a:hover {
-                color: var(--secondary);
-            }
+          display: none;
         }
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, #1a2840 100%);
-            color: var(--white);
-            padding: 80px 20px;
-            position: relative;
-            overflow: hidden;
+        .mobile-menu-toggle {
+          display: flex;
         }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
-            opacity: 0.5;
+        #mobile-nav {
+          display: block;
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: var(--white);
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.4s ease;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          z-index: 999;
+          padding-top: 0;
         }
-        
-        .hero-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
+
+        #mobile-nav::before {
+          content: '';
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(0, 0, 0, 0);
+          pointer-events: none;
+          transition: background 0.4s ease;
         }
-        
-        .hero-badge {
-            display: inline-block;
-            background: var(--secondary);
-            color: var(--white);
-            padding: 8px 20px;
-            border-radius: 30px;
-            font-size: 14px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            animation: slideInDown 0.8s ease;
+
+        #mobile-nav.active::before {
+          background: rgba(0, 0, 0, 0.3);
+          pointer-events: auto;
         }
-        
+
+        #mobile-nav.active {
+          max-height: 100vh;
+          overflow-y: auto;
+        }
+
+        #mobile-nav ul {
+          flex-direction: column;
+          gap: 0;
+          padding: 20px;
+          list-style: none;
+          position: relative;
+          z-index: 1000;
+        }
+
+        #mobile-nav li {
+          border-bottom: 1px solid #eee;
+          padding: 0;
+          margin: 0;
+        }
+
+        #mobile-nav li:last-child {
+          border-bottom: none;
+        }
+
+        #mobile-nav a {
+          color: var(--dark-gray);
+          text-decoration: none;
+          font-weight: 600;
+          display: block;
+          padding: 18px 0;
+          font-size: 18px;
+          transition: color 0.3s;
+        }
+
+        #mobile-nav a:hover {
+          color: var(--secondary);
+        }
+      }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(135deg, var(--primary) 0%, #1a2840 100%);
+        color: var(--white);
+        padding: 80px 20px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+        opacity: 0.5;
+      }
+
+      .hero-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero-badge {
+        display: inline-block;
+        background: var(--secondary);
+        color: var(--white);
+        padding: 8px 20px;
+        border-radius: 30px;
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        animation: slideInDown 0.8s ease;
+      }
+
+      .hero h1 {
+        font-size: 72px;
+        line-height: 1.1;
+        margin-bottom: 20px;
+        animation: slideInLeft 0.8s ease 0.2s both;
+      }
+
+      .hero h1 span {
+        color: var(--accent);
+      }
+
+      .hero p {
+        font-size: 20px;
+        margin-bottom: 30px;
+        max-width: 600px;
+        animation: slideInLeft 0.8s ease 0.4s both;
+      }
+
+      .hero-buttons {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        animation: slideInLeft 0.8s ease 0.6s both;
+      }
+
+      .hero-button {
+        padding: 15px 35px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 16px;
+        transition: all 0.3s;
+        display: inline-block;
+      }
+
+      .hero-button-primary {
+        background: var(--secondary);
+        color: var(--white);
+      }
+
+      .hero-button-primary:hover {
+        background: #ff5520;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(255, 107, 53, 0.4);
+      }
+
+      .hero-button-secondary {
+        background: transparent;
+        color: var(--white);
+        border: 2px solid var(--white);
+      }
+
+      .hero-button-secondary:hover {
+        background: var(--white);
+        color: var(--primary);
+      }
+
+      /* Trust Bar */
+      .trust-bar {
+        background: var(--accent);
+        padding: 20px;
+        text-align: center;
+      }
+
+      .trust-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 30px;
+      }
+
+      .trust-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--primary);
+        font-weight: 700;
+        font-family: 'Rajdhani', sans-serif;
+        font-size: 18px;
+      }
+
+      .trust-icon {
+        font-size: 30px;
+      }
+
+      /* Pricing Section */
+      .pricing {
+        background: var(--light);
+        padding: 80px 20px;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      .section-badge {
+        display: inline-block;
+        background: var(--secondary);
+        color: var(--white);
+        padding: 8px 20px;
+        border-radius: 30px;
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+
+      .section-header h2 {
+        font-size: 48px;
+        color: var(--primary);
+        margin-bottom: 15px;
+      }
+
+      .section-header p {
+        font-size: 18px;
+        color: var(--dark-gray);
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .pricing-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+
+      .pricing-card {
+        background: var(--white);
+        border-radius: 15px;
+        padding: 40px 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s;
+        position: relative;
+      }
+
+      .pricing-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+      }
+
+      .pricing-card.featured {
+        border: 3px solid var(--secondary);
+        transform: scale(1.05);
+      }
+
+      .pricing-badge {
+        position: absolute;
+        top: -15px;
+        right: 20px;
+        background: var(--secondary);
+        color: var(--white);
+        padding: 8px 20px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      .pricing-card h3 {
+        font-size: 32px;
+        color: var(--primary);
+        margin-bottom: 15px;
+      }
+
+      .price {
+        font-size: 56px;
+        font-weight: 700;
+        color: var(--secondary);
+        margin-bottom: 10px;
+        font-family: 'Bebas Neue', sans-serif;
+      }
+
+      .price-label {
+        color: var(--dark-gray);
+        font-size: 14px;
+        margin-bottom: 25px;
+      }
+
+      .pricing-features {
+        list-style: none;
+        margin-bottom: 30px;
+      }
+
+      .pricing-features li {
+        padding: 12px 0;
+        border-bottom: 1px solid #e0e0e0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .pricing-features li:before {
+        content: '✓';
+        color: var(--secondary);
+        font-weight: 700;
+        font-size: 18px;
+      }
+
+      .free-check-banner {
+        background: linear-gradient(135deg, var(--secondary) 0%, #ff5520 100%);
+        color: var(--white);
+        padding: 40px;
+        border-radius: 15px;
+        text-align: center;
+        margin-top: 50px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .free-check-banner h3 {
+        font-size: 36px;
+        margin-bottom: 15px;
+      }
+
+      .free-check-banner p {
+        font-size: 18px;
+        margin-bottom: 25px;
+      }
+
+      /* Services Section with Placeholder Images */
+      .services {
+        padding: 80px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        margin-top: 50px;
+      }
+
+      .service-card {
+        background: var(--white);
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s;
+      }
+
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+      }
+
+      .service-icon {
+        background: linear-gradient(135deg, var(--primary) 0%, #1a2840 100%);
+        color: var(--accent);
+        font-size: 64px;
+        padding: 50px;
+        text-align: center;
+      }
+
+      .service-content {
+        padding: 30px;
+      }
+
+      .service-content h3 {
+        font-size: 28px;
+        color: var(--primary);
+        margin-bottom: 15px;
+      }
+
+      .service-content p {
+        color: var(--dark-gray);
+        margin-bottom: 20px;
+      }
+
+      .service-link {
+        color: var(--secondary);
+        text-decoration: none;
+        font-weight: 700;
+        transition: gap 0.3s;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .service-link:hover {
+        gap: 10px;
+      }
+
+      /* Placeholder Image Styles */
+      .service-image-placeholder {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: var(--white);
+        text-align: center;
+        padding: 20px;
+      }
+
+      .placeholder-icon {
+        font-size: 80px;
+        margin-bottom: 15px;
+      }
+
+      .placeholder-text {
+        font-size: 14px;
+        font-weight: 700;
+        opacity: 0.9;
+        font-family: 'Rajdhani', sans-serif;
+        letter-spacing: 1px;
+      }
+
+      /* Reviews Section */
+      .reviews {
+        background: var(--primary);
+        color: var(--white);
+        padding: 80px 20px;
+      }
+
+      .reviews-content {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .reviews-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 50px;
+      }
+
+      .review-card {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 30px;
+        border-radius: 15px;
+        border-left: 4px solid var(--accent);
+      }
+
+      .review-stars {
+        color: var(--accent);
+        font-size: 24px;
+        margin-bottom: 15px;
+      }
+
+      .review-text {
+        font-size: 16px;
+        line-height: 1.8;
+        margin-bottom: 15px;
+        font-style: italic;
+      }
+
+      .review-author {
+        font-weight: 700;
+        color: var(--accent);
+      }
+
+      /* CTA Section */
+      .cta-section {
+        background: linear-gradient(135deg, var(--secondary) 0%, #ff5520 100%);
+        color: var(--white);
+        padding: 80px 20px;
+        text-align: center;
+      }
+
+      .cta-section h2 {
+        font-size: 48px;
+        margin-bottom: 20px;
+      }
+
+      .cta-section p {
+        font-size: 20px;
+        margin-bottom: 40px;
+      }
+
+      .cta-buttons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      /* Footer */
+      footer {
+        background: var(--dark-gray);
+        color: var(--light);
+        padding: 60px 20px 30px;
+      }
+
+      .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+
+      .footer-section h3 {
+        color: var(--white);
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .footer-section ul {
+        list-style: none;
+      }
+
+      .footer-section ul li {
+        margin-bottom: 10px;
+      }
+
+      .footer-section a {
+        color: var(--light);
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .footer-section a:hover {
+        color: var(--accent);
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      /* Sticky Mobile CTA */
+      .sticky-mobile-cta {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: var(--secondary);
+        padding: 15px 20px;
+        box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.3);
+        z-index: 999;
+        display: none;
+      }
+
+      .sticky-mobile-cta a {
+        color: var(--white);
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 16px;
+        display: block;
+        text-align: center;
+      }
+
+      /* Animations */
+      @keyframes slideInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slideInLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .top-bar-content {
+          grid-template-columns: 1fr;
+        }
+
+        nav {
+          display: none;
+        }
+
+        .mobile-menu-toggle {
+          display: flex;
+          z-index: 1001;
+        }
+
+        .header-content {
+          position: relative;
+        }
+
         .hero h1 {
-            font-size: 72px;
-            line-height: 1.1;
-            margin-bottom: 20px;
-            animation: slideInLeft 0.8s ease 0.2s both;
+          font-size: 42px;
         }
-        
-        .hero h1 span {
-            color: var(--accent);
-        }
-        
+
         .hero p {
-            font-size: 20px;
-            margin-bottom: 30px;
-            max-width: 600px;
-            animation: slideInLeft 0.8s ease 0.4s both;
+          font-size: 16px;
         }
-        
-        .hero-buttons {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            animation: slideInLeft 0.8s ease 0.6s both;
-        }
-        
-        .hero-button {
-            padding: 15px 35px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 16px;
-            transition: all 0.3s;
-            display: inline-block;
-        }
-        
-        .hero-button-primary {
-            background: var(--secondary);
-            color: var(--white);
-        }
-        
-        .hero-button-primary:hover {
-            background: #ff5520;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.4);
-        }
-        
-        .hero-button-secondary {
-            background: transparent;
-            color: var(--white);
-            border: 2px solid var(--white);
-        }
-        
-        .hero-button-secondary:hover {
-            background: var(--white);
-            color: var(--primary);
-        }
-        
-        /* Trust Bar */
-        .trust-bar {
-            background: var(--accent);
-            padding: 20px;
-            text-align: center;
-        }
-        
-        .trust-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-        
-        .trust-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--primary);
-            font-weight: 700;
-            font-family: 'Rajdhani', sans-serif;
-            font-size: 18px;
-        }
-        
-        .trust-icon {
-            font-size: 30px;
-        }
-        
-        /* Pricing Section */
-        .pricing {
-            background: var(--light);
-            padding: 80px 20px;
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        
-        .section-badge {
-            display: inline-block;
-            background: var(--secondary);
-            color: var(--white);
-            padding: 8px 20px;
-            border-radius: 30px;
-            font-size: 14px;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-        
+
         .section-header h2 {
-            font-size: 48px;
-            color: var(--primary);
-            margin-bottom: 15px;
+          font-size: 36px;
         }
-        
-        .section-header p {
-            font-size: 18px;
-            color: var(--dark-gray);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .pricing-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .pricing-card {
-            background: var(--white);
-            border-radius: 15px;
-            padding: 40px 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: all 0.3s;
-            position: relative;
-        }
-        
-        .pricing-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-        }
-        
-        .pricing-card.featured {
-            border: 3px solid var(--secondary);
-            transform: scale(1.05);
-        }
-        
-        .pricing-badge {
-            position: absolute;
-            top: -15px;
-            right: 20px;
-            background: var(--secondary);
-            color: var(--white);
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-        
-        .pricing-card h3 {
-            font-size: 32px;
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-        
-        .price {
-            font-size: 56px;
-            font-weight: 700;
-            color: var(--secondary);
-            margin-bottom: 10px;
-            font-family: 'Bebas Neue', sans-serif;
-        }
-        
-        .price-label {
-            color: var(--dark-gray);
-            font-size: 14px;
-            margin-bottom: 25px;
-        }
-        
-        .pricing-features {
-            list-style: none;
-            margin-bottom: 30px;
-        }
-        
-        .pricing-features li {
-            padding: 12px 0;
-            border-bottom: 1px solid #e0e0e0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .pricing-features li:before {
-            content: "✓";
-            color: var(--secondary);
-            font-weight: 700;
-            font-size: 18px;
-        }
-        
-        .free-check-banner {
-            background: linear-gradient(135deg, var(--secondary) 0%, #ff5520 100%);
-            color: var(--white);
-            padding: 40px;
-            border-radius: 15px;
-            text-align: center;
-            margin-top: 50px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .free-check-banner h3 {
-            font-size: 36px;
-            margin-bottom: 15px;
-        }
-        
-        .free-check-banner p {
-            font-size: 18px;
-            margin-bottom: 25px;
-        }
-        
-        /* Services Section with Placeholder Images */
-        .services {
-            padding: 80px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-        
-        .service-card {
-            background: var(--white);
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: all 0.3s;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-        }
-        
-        .service-icon {
-            background: linear-gradient(135deg, var(--primary) 0%, #1a2840 100%);
-            color: var(--accent);
-            font-size: 64px;
-            padding: 50px;
-            text-align: center;
-        }
-        
-        .service-content {
-            padding: 30px;
-        }
-        
-        .service-content h3 {
-            font-size: 28px;
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-        
-        .service-content p {
-            color: var(--dark-gray);
-            margin-bottom: 20px;
-        }
-        
-        .service-link {
-            color: var(--secondary);
-            text-decoration: none;
-            font-weight: 700;
-            transition: gap 0.3s;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-        }
-        
-        .service-link:hover {
-            gap: 10px;
-        }
-        
-        /* Placeholder Image Styles */
-        .service-image-placeholder {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            height: 250px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            text-align: center;
-            padding: 20px;
-        }
-        
-        .placeholder-icon {
-            font-size: 80px;
-            margin-bottom: 15px;
-        }
-        
-        .placeholder-text {
-            font-size: 14px;
-            font-weight: 700;
-            opacity: 0.9;
-            font-family: 'Rajdhani', sans-serif;
-            letter-spacing: 1px;
-        }
-        
-        /* Reviews Section */
-        .reviews {
-            background: var(--primary);
-            color: var(--white);
-            padding: 80px 20px;
-        }
-        
-        .reviews-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-        
-        .review-card {
-            background: rgba(255,255,255,0.1);
-            padding: 30px;
-            border-radius: 15px;
-            border-left: 4px solid var(--accent);
-        }
-        
-        .review-stars {
-            color: var(--accent);
-            font-size: 24px;
-            margin-bottom: 15px;
-        }
-        
-        .review-text {
-            font-size: 16px;
-            line-height: 1.8;
-            margin-bottom: 15px;
-            font-style: italic;
-        }
-        
-        .review-author {
-            font-weight: 700;
-            color: var(--accent);
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, var(--secondary) 0%, #ff5520 100%);
-            color: var(--white);
-            padding: 80px 20px;
-            text-align: center;
-        }
-        
-        .cta-section h2 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-        
-        .cta-section p {
-            font-size: 20px;
-            margin-bottom: 40px;
-        }
-        
-        .cta-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--dark-gray);
-            color: var(--light);
-            padding: 60px 20px 30px;
-        }
-        
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-        
-        .footer-section h3 {
-            color: var(--white);
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-        
-        .footer-section ul {
-            list-style: none;
-        }
-        
-        .footer-section ul li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-section a {
-            color: var(--light);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .footer-section a:hover {
-            color: var(--accent);
-        }
-        
-        .footer-bottom {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: rgba(255,255,255,0.6);
-        }
-        
-        /* Sticky Mobile CTA */
+
         .sticky-mobile-cta {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: var(--secondary);
-            padding: 15px 20px;
-            box-shadow: 0 -4px 15px rgba(0,0,0,0.3);
-            z-index: 999;
-            display: none;
+          display: block;
         }
-        
-        .sticky-mobile-cta a {
-            color: var(--white);
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 16px;
-            display: block;
-            text-align: center;
+
+        .hero-buttons {
+          flex-direction: column;
         }
-        
-        /* Animations */
-        @keyframes slideInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+
+        .hero-button {
+          text-align: center;
         }
-        
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+
+        .locations-container {
+          grid-template-columns: 1fr;
         }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .top-bar-content {
-                grid-template-columns: 1fr;
-            }
-            
-            nav {
-                display: none;
-            }
-            
-            .mobile-menu-toggle {
-                display: flex;
-                z-index: 1001;
-            }
-            
-            .header-content {
-                position: relative;
-            }
-            
-            .hero h1 {
-                font-size: 42px;
-            }
-            
-            .hero p {
-                font-size: 16px;
-            }
-            
-            .section-header h2 {
-                font-size: 36px;
-            }
-            
-            .sticky-mobile-cta {
-                display: block;
-            }
-            
-            .hero-buttons {
-                flex-direction: column;
-            }
-            
-            .hero-button {
-                text-align: center;
-            }
-            
-            .locations-container {
-                grid-template-columns: 1fr;
-            }
-            .phone-mockup {
-                width: 100%;
-                height: auto;
-            }
-            .header h1 {
-                font-size: 36px;
-            }
-            .header p {
-                font-size: 16px;
-            }
-            .location-card {
-                padding: 10px;
-            }
-            .service-name {
-                font-size: 14px;
-            }
-            .price-value {
-                font-size: 24px;
-            }
-            .price-description {
-                font-size: 10px;
-            }
-            .cta-button {
-                font-size: 12px;
-                padding: 10px;
-            }
-            .notes-section h2 {
-                font-size: 24px;
-            }
-            .note-item h3 {
-                font-size: 16px;
-            }
-            .note-item p {
-                font-size: 14px;
-            }
+        .phone-mockup {
+          width: 100%;
+          height: auto;
         }
+        .header h1 {
+          font-size: 36px;
+        }
+        .header p {
+          font-size: 16px;
+        }
+        .location-card {
+          padding: 10px;
+        }
+        .service-name {
+          font-size: 14px;
+        }
+        .price-value {
+          font-size: 24px;
+        }
+        .price-description {
+          font-size: 10px;
+        }
+        .cta-button {
+          font-size: 12px;
+          padding: 10px;
+        }
+        .notes-section h2 {
+          font-size: 24px;
+        }
+        .note-item h3 {
+          font-size: 16px;
+        }
+        .note-item p {
+          font-size: 14px;
+        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Top Bar with Dual Locations -->
     <div class="top-bar">
-        <div class="top-bar-content">
-            <!-- Bakersfield Location -->
-            <div class="location-info">
-                <div class="location-header">📍 Bakersfield, CA</div>
-                <a href="tel:+16614140015">📞 (661) 414-0015</a>
-                <a href="https://maps.app.goo.gl/ev7Mc7zmM2rohicq7" target="_blank">4615 E Brundage Ln Unit 2, Bakersfield, CA 93307</a>
-                <span style="font-size: 12px; opacity: 0.9;">⏰ M-F: 8AM-7PM | Sat-Sun: 8AM-5PM</span>
-            </div>
-            
-            <!-- San Antonio Location -->
-            <div class="location-info">
-                <div class="location-header">📍 San Antonio, TX</div>
-                <a href="tel:+12102541155">📞 (210) 254-1155</a>
-                <a href="#" target="_blank">9420 Green Rd Unit 4, Converse, TX 78109</a>
-                <span style="font-size: 12px; opacity: 0.9;">⏰ M-F: 8AM-7PM | Sat-Sun: 8AM-5PM</span>
-            </div>
+      <div class="top-bar-content">
+        <!-- Bakersfield Location -->
+        <div class="location-info">
+          <div class="location-header">📍 Bakersfield, CA</div>
+          <a href="tel:+16614140015">📞 (661) 414-0015</a>
+          <button
+            onclick="
+              window.open('https://maps.app.goo.gl/ev7Mc7zmM2rohicq7', '_blank')
+            "
+            style="
+              background: var(--secondary);
+              color: var(--white);
+              padding: 10px 15px;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+            "
+          >
+            Visit Us
+          </button>
+          <span style="font-size: 16px; font-weight: bold"
+            >⏰ M-F: 8AM-7PM | Sat-Sun: 8AM-5PM</span
+          >
         </div>
+
+        <!-- San Antonio Location -->
+        <div class="location-info">
+          <div class="location-header">📍 San Antonio, TX</div>
+          <a href="tel:+12102541155">📞 (210) 254-1155</a>
+          <button
+            onclick="
+              window.open('https://maps.app.goo.gl/ev7Mc7zmM2rohicq7', '_blank')
+            "
+            style="
+              background: var(--secondary);
+              color: var(--white);
+              padding: 10px 15px;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+            "
+          >
+            Visit Us
+          </button>
+          <span style="font-size: 16px; font-weight: bold"
+            >⏰ M-F: 8AM-7PM | Sat-Sun: 8AM-5PM</span
+          >
+        </div>
+      </div>
     </div>
 
     <!-- Main Header -->
     <header class="main-header">
-        <div class="header-content">
-            <div class="logo">58 <span>ALIGNMENT</span></div>
-            <!-- Desktop Navigation -->
-            <nav id="desktop-nav">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#reviews">Reviews</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <!-- Mobile Navigation -->
-            <nav id="mobile-nav">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#reviews">Reviews</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <a href="tel:+16614140015" class="cta-button">Book Now</a>
-            <div class="mobile-menu-toggle" id="mobile-menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+      <div class="header-content">
+        <div class="logo">58 <span>ALIGNMENT</span></div>
+        <!-- Desktop Navigation -->
+        <nav id="desktop-nav">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <!-- Mobile Navigation -->
+        <nav id="mobile-nav">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <a href="tel:+16614140015" class="cta-button">Book Now</a>
+        <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
+      </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="hero-content">
-            <span class="hero-badge">🎯 FREE ALIGNMENT CHECK</span>
-            <h1>BAKERSFIELD'S MOST <span>AFFORDABLE</span> TRUCK ALIGNMENT</h1>
-            <p>Keep your truck or trailer running straight, safe, and efficient with our expert wheel alignment services. Serving Bakersfield, CA & San Antonio, TX.</p>
-            <div class="hero-buttons">
-                <a href="tel:+16614140015" class="hero-button hero-button-primary">📞 Call Bakersfield: (661) 414-0015</a>
-                <a href="tel:+12102541155" class="hero-button hero-button-secondary">📞 Call San Antonio: (210) 254-1155</a>
-            </div>
+      <div class="hero-content">
+        <!-- <span class="hero-badge">🎯 FREE ALIGNMENT CHECK</span> -->
+        <h1>BAKERSFIELD'S MOST <span>AFFORDABLE</span> TRUCK ALIGNMENT</h1>
+        <p>
+          Keep your truck or trailer running straight, safe, and efficient with
+          our expert wheel alignment services. Serving Bakersfield, CA & San
+          Antonio, TX.
+        </p>
+        <div class="hero-buttons">
+          <a href="tel:+16614140015" class="hero-button hero-button-primary"
+            >📞 Call Bakersfield: (661) 414-0015</a
+          >
+          <a href="tel:+12102541155" class="hero-button hero-button-secondary"
+            >📞 Call San Antonio: (210) 254-1155</a
+          >
         </div>
+      </div>
     </section>
 
     <!-- Trust Bar -->
     <div class="trust-bar">
-        <div class="trust-content">
-            <div class="trust-item">
-                <span class="trust-icon">⭐</span>
-                <span>138+ FIVE-STAR REVIEWS</span>
-            </div>
-            <div class="trust-item">
-                <span class="trust-icon">🔧</span>
-                <span>HUNTER LASER PRECISION</span>
-            </div>
-            <div class="trust-item">
-                <span class="trust-icon">⚡</span>
-                <span>SAME-DAY SERVICE</span>
-            </div>
-            <div class="trust-item">
-                <span class="trust-icon">💯</span>
-                <span>NO APPOINTMENT NEEDED</span>
-            </div>
+      <div class="trust-content">
+        <div class="trust-item">
+          <span class="trust-icon">⭐</span>
+          <span>138+ FIVE-STAR REVIEWS</span>
         </div>
+        <div class="trust-item">
+          <span class="trust-icon">🔧</span>
+          <span>HUNTER LASER PRECISION</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon">⚡</span>
+          <span>SAME-DAY SERVICE</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon">💯</span>
+          <span>NO APPOINTMENT NEEDED</span>
+        </div>
+      </div>
     </div>
 
     <!-- Pricing Section -->
     <section class="pricing" id="pricing">
-        <div class="section-header">
-            <span class="section-badge">💰 TRANSPARENT PRICING</span>
-            <h2>COMPETITIVE ALIGNMENT RATES</h2>
-            <p>No hidden fees. No surprises. Just honest pricing for quality service.</p>
+      <div class="section-header">
+        <span class="section-badge">💰 TRANSPARENT PRICING</span>
+        <h2>COMPETITIVE ALIGNMENT RATES</h2>
+        <p>
+          No hidden fees. No surprises. Just honest pricing for quality service.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Truck Alignment</h3>
+          <div class="price">$250</div>
+          <div class="price-label">Competitive Rate</div>
+          <ul class="pricing-features">
+            <li>Complete Front-End Check</li>
+            <li>Hunter Laser Precision</li>
+            <li>Same-Day Service</li>
+            <li>Experienced Technicians</li>
+          </ul>
+          <a href="tel:+16614140015" class="cta-button" style="width: 100%"
+            >Book Now</a
+          >
         </div>
-        
-        <div class="pricing-grid">
-            <div class="pricing-card">
-                <h3>Truck Alignment</h3>
-                <div class="price">$250</div>
-                <div class="price-label">Competitive Rate</div>
-                <ul class="pricing-features">
-                    <li>Complete Front-End Check</li>
-                    <li>Hunter Laser Precision</li>
-                    <li>Same-Day Service</li>
-                    <li>Experienced Technicians</li>
-                </ul>
-                <a href="tel:+16614140015" class="cta-button" style="width: 100%;">Book Now</a>
-            </div>
-            
-            <div class="pricing-card">
-                <h3>Trailer Alignment</h3>
-                <div class="price">$200</div>
-                <div class="price-label">Affordable & Precise</div>
-                <ul class="pricing-features">
-                    <li>Axle Alignment Check</li>
-                    <li>Reduces Tire Wear</li>
-                    <li>Improves Fuel Economy</li>
-                    <li>Professional Service</li>
-                </ul>
-                <a href="tel:+16614140015" class="cta-button" style="width: 100%;">Book Now</a>
-            </div>
-            
-            <div class="pricing-card featured">
-                <span class="pricing-badge">⭐ BEST VALUE</span>
-                <h3>Truck & Trailer</h3>
-                <div class="price">$400</div>
-                <div class="price-label">Save $50 Combo Deal</div>
-                <ul class="pricing-features">
-                    <li>Complete Rig Alignment</li>
-                    <li>Maximum Savings</li>
-                    <li>Both Done Same Day</li>
-                    <li>Priority Service</li>
-                </ul>
-                <a href="tel:+16614140015" class="cta-button" style="width: 100%;">Book Now</a>
-            </div>
+
+        <div class="pricing-card">
+          <h3>Trailer Alignment</h3>
+          <div class="price">$200</div>
+          <div class="price-label">Affordable & Precise</div>
+          <ul class="pricing-features">
+            <li>Axle Alignment Check</li>
+            <li>Reduces Tire Wear</li>
+            <li>Improves Fuel Economy</li>
+            <li>Professional Service</li>
+          </ul>
+          <a href="tel:+16614140015" class="cta-button" style="width: 100%"
+            >Book Now</a
+          >
         </div>
-        
-        <div class="free-check-banner">
-            <h3>🎯 FREE ALIGNMENT CHECK!</h3>
-            <p>Don't need an alignment? No problem. We check for FREE and only charge if adjustment is needed. That's our promise!</p>
-            <a href="tel:+16614140015" class="cta-button">Schedule Free Check</a>
+
+        <div class="pricing-card featured">
+          <span class="pricing-badge">⭐ BEST VALUE</span>
+          <h3>Truck & Trailer</h3>
+          <div class="price">$400</div>
+          <div class="price-label">Save $50 Combo Deal</div>
+          <ul class="pricing-features">
+            <li>Complete Rig Alignment</li>
+            <li>Maximum Savings</li>
+            <li>Both Done Same Day</li>
+            <li>Priority Service</li>
+          </ul>
+          <a href="tel:+16614140015" class="cta-button" style="width: 100%"
+            >Book Now</a
+          >
         </div>
+      </div>
+
+      <div class="free-check-banner">
+        <h3>🎯 !</h3>
+        <p>
+          Don't need an alignment? No problem. We check for FREE and only charge
+          if adjustment is needed. That's our promise!
+        </p>
+        <a href="tel:+16614140015" class="cta-button">Schedule Free Check</a>
+      </div>
     </section>
 
     <!-- Services Section with Placeholder Images -->
     <section class="services" id="services">
-        <div class="section-header">
-            <span class="section-badge">🔧 OUR SERVICES</span>
-            <h2>COMPLETE TRUCK & TRAILER MAINTENANCE</h2>
-            <p>From alignment to suspension, we keep your fleet running safely and efficiently.</p>
+      <div class="section-header">
+        <span class="section-badge">🔧 OUR SERVICES</span>
+        <h2>COMPLETE TRUCK & TRAILER MAINTENANCE</h2>
+        <p>
+          From alignment to suspension, we keep your fleet running safely and
+          efficiently.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-image-placeholder">
+            <div class="placeholder-icon">⚙️</div>
+            <div class="placeholder-text">
+              REPLACE WITH:<br />
+              truck-alignment-service.jpg<br />
+              (Show technician using Hunter equipment)
+            </div>
+          </div>
+          <div class="service-content">
+            <h3>Wheel Alignment</h3>
+            <p>
+              Precision laser alignment for trucks, trailers, RVs, buses, and
+              coaches using advanced Hunter equipment.
+            </p>
+            <a href="#contact" class="service-link">Learn More →</a>
+          </div>
         </div>
-        
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-image-placeholder">
-                    <div class="placeholder-icon">⚙️</div>
-                    <div class="placeholder-text">
-                        REPLACE WITH:<br>
-                        truck-alignment-service.jpg<br>
-                        (Show technician using Hunter equipment)
-                    </div>
-                </div>
-                <div class="service-content">
-                    <h3>Wheel Alignment</h3>
-                    <p>Precision laser alignment for trucks, trailers, RVs, buses, and coaches using advanced Hunter equipment.</p>
-                    <a href="#contact" class="service-link">Learn More →</a>
-                </div>
+
+        <div class="service-card">
+          <div class="service-image-placeholder">
+            <div class="placeholder-icon">🔩</div>
+            <div class="placeholder-text">
+              REPLACE WITH:<br />
+              truck-suspension-repair.jpg<br />
+              (Show suspension work in progress)
             </div>
-            
-            <div class="service-card">
-                <div class="service-image-placeholder">
-                    <div class="placeholder-icon">🔩</div>
-                    <div class="placeholder-text">
-                        REPLACE WITH:<br>
-                        truck-suspension-repair.jpg<br>
-                        (Show suspension work in progress)
-                    </div>
-                </div>
-                <div class="service-content">
-                    <h3>Truck Suspension</h3>
-                    <p>Complete suspension inspection, repair, and replacement to ensure smooth, safe operation.</p>
-                    <a href="#contact" class="service-link">Learn More →</a>
-                </div>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-image-placeholder">
-                    <div class="placeholder-icon">💨</div>
-                    <div class="placeholder-text">
-                        REPLACE WITH:<br>
-                        air-ride-control-system.jpg<br>
-                        (Show air suspension components)
-                    </div>
-                </div>
-                <div class="service-content">
-                    <h3>Air Ride Control</h3>
-                    <p>Expert air suspension diagnostics and repair for optimal ride quality and load management.</p>
-                    <a href="#contact" class="service-link">Learn More →</a>
-                </div>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-image-placeholder">
-                    <div class="placeholder-icon">🛑</div>
-                    <div class="placeholder-text">
-                        REPLACE WITH:<br>
-                        truck-brake-service.jpg<br>
-                        (Show brake inspection or repair)
-                    </div>
-                </div>
-                <div class="service-content">
-                    <h3>Brake Service</h3>
-                    <p>Professional brake inspection, adjustment, and repair to keep your vehicle stopping safely.</p>
-                    <a href="#contact" class="service-link">Learn More →</a>
-                </div>
-            </div>
+          </div>
+          <div class="service-content">
+            <h3>Truck Suspension</h3>
+            <p>
+              Complete suspension inspection, repair, and replacement to ensure
+              smooth, safe operation.
+            </p>
+            <a href="#contact" class="service-link">Learn More →</a>
+          </div>
         </div>
+
+        <div class="service-card">
+          <div class="service-image-placeholder">
+            <div class="placeholder-icon">💨</div>
+            <div class="placeholder-text">
+              REPLACE WITH:<br />
+              air-ride-control-system.jpg<br />
+              (Show air suspension components)
+            </div>
+          </div>
+          <div class="service-content">
+            <h3>Air Ride Control</h3>
+            <p>
+              Expert air suspension diagnostics and repair for optimal ride
+              quality and load management.
+            </p>
+            <a href="#contact" class="service-link">Learn More →</a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-image-placeholder">
+            <div class="placeholder-icon">🛑</div>
+            <div class="placeholder-text">
+              REPLACE WITH:<br />
+              truck-brake-service.jpg<br />
+              (Show brake inspection or repair)
+            </div>
+          </div>
+          <div class="service-content">
+            <h3>Brake Service</h3>
+            <p>
+              Professional brake inspection, adjustment, and repair to keep your
+              vehicle stopping safely.
+            </p>
+            <a href="#contact" class="service-link">Learn More →</a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Reviews Section -->
     <section class="reviews" id="reviews">
-        <div class="reviews-content">
-            <div class="section-header">
-                <span class="section-badge">⭐ CUSTOMER REVIEWS</span>
-                <h2>WHAT OUR CUSTOMERS SAY</h2>
-                <p>Don't just take our word for it. See what truckers in Bakersfield and San Antonio are saying about our service.</p>
-            </div>
-            
-            <div class="reviews-grid">
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">"By Far the best Truck Alignment in Bakersfield. Highly Recommended. Professional service, great prices, and they actually care about getting it right!"</p>
-                    <p class="review-author">- Bill R.</p>
-                </div>
-                
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">"Very good people, very friendly very helpful Great Quality work!! And can also align your lifted trucks that wont fit anywhere else, Highly recommended no appointment needed 👌"</p>
-                    <p class="review-author">- Raul G.</p>
-                </div>
-                
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">"Great place for alignment and window replacement took care of both things there great prices and great work and great customer service"</p>
-                    <p class="review-author">- JCP&SONS</p>
-                </div>
-            </div>
+      <div class="reviews-content">
+        <div class="section-header">
+          <span class="section-badge">⭐ CUSTOMER REVIEWS</span>
+          <h2>WHAT OUR CUSTOMERS SAY</h2>
+          <p>
+            Don't just take our word for it. See what truckers in Bakersfield
+            and San Antonio are saying about our service.
+          </p>
         </div>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              "By Far the best Truck Alignment in Bakersfield. Highly
+              Recommended. Professional service, great prices, and they actually
+              care about getting it right!"
+            </p>
+            <p class="review-author">- Bill R.</p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              "Very good people, very friendly very helpful Great Quality work!!
+              And can also align your lifted trucks that wont fit anywhere else,
+              Highly recommended no appointment needed 👌"
+            </p>
+            <p class="review-author">- Raul G.</p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              "Great place for alignment and window replacement took care of
+              both things there great prices and great work and great customer
+              service"
+            </p>
+            <p class="review-author">- JCP&SONS</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- CTA Section -->
     <section class="cta-section" id="contact">
-        <h2>READY TO GET YOUR TRUCK ALIGNED?</h2>
-        <p>Don't wait for tire wear to get worse. Call now for same-day service!</p>
-        <div class="cta-buttons">
-            <a href="tel:+16614140015" class="hero-button hero-button-primary">📞 Bakersfield: (661) 414-0015</a>
-            <a href="tel:+12102541155" class="hero-button hero-button-primary">📞 San Antonio: (210) 254-1155</a>
-        </div>
+      <h2>READY TO GET YOUR TRUCK ALIGNED?</h2>
+      <p>
+        Don't wait for tire wear to get worse. Call now for same-day service!
+      </p>
+      <div class="cta-buttons">
+        <a href="tel:+16614140015" class="hero-button hero-button-primary"
+          >📞 Bakersfield: (661) 414-0015</a
+        >
+        <a href="tel:+12102541155" class="hero-button hero-button-primary"
+          >📞 San Antonio: (210) 254-1155</a
+        >
+      </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>58 Alignment</h3>
-                <p>America's trusted heavy-duty alignment specialists serving California and Texas since 2010.</p>
-                <div class="social-links" style="margin-top: 20px;">
-                    <a href="https://www.facebook.com/58alignment" target="_blank">Facebook</a>
-                    <a href="https://www.instagram.com/58alignments/" target="_blank">Instagram</a>
-                    <a href="https://www.youtube.com/channel/UCCSUwucAzYd33vTpuQZrjXw" target="_blank">YouTube</a>
-                </div>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Bakersfield, CA</h3>
-                <ul>
-                    <li><a href="tel:+16614140015">📞 (661) 414-0015</a></li>
-                    <li>📍 4615 E Brundage Ln Unit 2<br>Bakersfield, CA 93307</li>
-                    <li>⏰ M-F: 8AM-7PM<br>Sat-Sun: 8AM-5PM</li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h3>San Antonio, TX</h3>
-                <ul>
-                    <li><a href="tel:+12102541155">📞 (210) 254-1155</a></li>
-                    <li>📍 9420 Green Rd Unit 4<br>Converse, TX 78109</li>
-                    <li>⏰ M-F: 8AM-7PM<br>Sat-Sun: 8AM-5PM</li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Services</h3>
-                <ul>
-                    <li><a href="#services">Wheel Alignment</a></li>
-                    <li><a href="#services">Truck Suspension</a></li>
-                    <li><a href="#services">Air Ride Control</a></li>
-                    <li><a href="#services">Brake Service</a></li>
-                </ul>
-            </div>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>58 Alignment</h3>
+          <p>
+            America's trusted heavy-duty alignment specialists serving
+            California and Texas since 2010.
+          </p>
+          <div class="social-links" style="margin-top: 20px">
+            <a href="https://www.facebook.com/58alignment" target="_blank"
+              >Facebook</a
+            >
+            <a href="https://www.instagram.com/58alignments/" target="_blank"
+              >Instagram</a
+            >
+            <a
+              href="https://www.youtube.com/channel/UCCSUwucAzYd33vTpuQZrjXw"
+              target="_blank"
+              >YouTube</a
+            >
+          </div>
         </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2025 58 Truck & Trailer Alignment. All Rights Reserved. | <a href="https://nuhatech.org" target="_blank">Website by Nuhatech</a></p>
+
+        <div class="footer-section">
+          <h3>Bakersfield, CA</h3>
+          <ul>
+            <li><a href="tel:+16614140015">📞 (661) 414-0015</a></li>
+            <li>📍 4615 E Brundage Ln Unit 2<br />Bakersfield, CA 93307</li>
+            <li>⏰ M-F: 8AM-7PM<br />Sat-Sun: 8AM-5PM</li>
+          </ul>
         </div>
+
+        <div class="footer-section">
+          <h3>San Antonio, TX</h3>
+          <ul>
+            <li><a href="tel:+12102541155">📞 (210) 254-1155</a></li>
+            <li>📍 9420 Green Rd Unit 4<br />Converse, TX 78109</li>
+            <li>⏰ M-F: 8AM-7PM<br />Sat-Sun: 8AM-5PM</li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="#services">Wheel Alignment</a></li>
+            <li><a href="#services">Truck Suspension</a></li>
+            <li><a href="#services">Air Ride Control</a></li>
+            <li><a href="#services">Brake Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; 2025 58 Truck & Trailer Alignment. All Rights Reserved. |
+          <a href="https://nuhatech.org" target="_blank">Website by Nuhatech</a>
+        </p>
+      </div>
     </footer>
 
     <!-- Sticky Mobile CTA -->
     <div class="sticky-mobile-cta">
-        <a href="tel:+16614140015">📞 CALL NOW - BAKERSFIELD</a>
+      <a href="tel:+16614140015">📞 CALL NOW - BAKERSFIELD</a>
     </div>
 
     <!-- Multi-Location Schema Markup -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "AutoRepair",
-      "name": "58 Truck & Trailer Alignment",
-      "priceRange": "$$",
-      "location": [
-        {
-          "@type": "Place",
-          "name": "58 Truck & Trailer Alignment - Bakersfield",
-          "telephone": "+16614140015",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "4615 E Brundage Ln Unit 2",
-            "addressLocality": "Bakersfield",
-            "addressRegion": "CA",
-            "postalCode": "93307",
-            "addressCountry": "US"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 35.3733,
-            "longitude": -119.0187
-          },
-          "openingHoursSpecification": [
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-              "opens": "08:00",
-              "closes": "19:00"
+      {
+        "@context": "https://schema.org",
+        "@type": "AutoRepair",
+        "name": "58 Truck & Trailer Alignment",
+        "priceRange": "$$",
+        "location": [
+          {
+            "@type": "Place",
+            "name": "58 Truck & Trailer Alignment - Bakersfield",
+            "telephone": "+16614140015",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "4615 E Brundage Ln Unit 2",
+              "addressLocality": "Bakersfield",
+              "addressRegion": "CA",
+              "postalCode": "93307",
+              "addressCountry": "US"
             },
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Saturday", "Sunday"],
-              "opens": "08:00",
-              "closes": "17:00"
-            }
-          ]
-        },
-        {
-          "@type": "Place",
-          "name": "58 Truck & Trailer Alignment - San Antonio",
-          "telephone": "+12102541155",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "9420 Green Rd Unit 4",
-            "addressLocality": "Converse",
-            "addressRegion": "TX",
-            "postalCode": "78109",
-            "addressCountry": "US"
-          },
-          "openingHoursSpecification": [
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-              "opens": "08:00",
-              "closes": "19:00"
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 35.3733,
+              "longitude": -119.0187
             },
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Saturday", "Sunday"],
-              "opens": "08:00",
-              "closes": "17:00"
-            }
-          ]
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday"
+                ],
+                "opens": "08:00",
+                "closes": "19:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Saturday", "Sunday"],
+                "opens": "08:00",
+                "closes": "17:00"
+              }
+            ]
+          },
+          {
+            "@type": "Place",
+            "name": "58 Truck & Trailer Alignment - San Antonio",
+            "telephone": "+12102541155",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "9420 Green Rd Unit 4",
+              "addressLocality": "Converse",
+              "addressRegion": "TX",
+              "postalCode": "78109",
+              "addressCountry": "US"
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday"
+                ],
+                "opens": "08:00",
+                "closes": "19:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Saturday", "Sunday"],
+                "opens": "08:00",
+                "closes": "17:00"
+              }
+            ]
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "reviewCount": "138"
         }
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "reviewCount": "138"
       }
-    }
     </script>
 
     <!-- Hamburger Menu JavaScript -->
     <script>
-        const hamburger = document.getElementById('mobile-menu-toggle');
-        const mobileNav = document.getElementById('mobile-nav');
-        const navLinks = mobileNav.querySelectorAll('a');
-        const body = document.body;
+      const hamburger = document.getElementById('mobile-menu-toggle');
+      const mobileNav = document.getElementById('mobile-nav');
+      const navLinks = mobileNav.querySelectorAll('a');
+      const body = document.body;
 
-        // Toggle menu on hamburger click
-        hamburger.addEventListener('click', function(e) {
-            e.stopPropagation();
-            hamburger.classList.toggle('active');
-            mobileNav.classList.toggle('active');
-            
-            // Prevent body scroll when menu is open
-            if (mobileNav.classList.contains('active')) {
-                body.style.overflow = 'hidden';
-            } else {
-                body.style.overflow = 'auto';
+      // Toggle menu on hamburger click
+      hamburger.addEventListener('click', function (e) {
+        e.stopPropagation();
+        hamburger.classList.toggle('active');
+        mobileNav.classList.toggle('active');
+
+        // Prevent body scroll when menu is open
+        if (mobileNav.classList.contains('active')) {
+          body.style.overflow = 'hidden';
+        } else {
+          body.style.overflow = 'auto';
+        }
+      });
+
+      // Close menu and scroll to section when a link is clicked
+      navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+          const href = this.getAttribute('href');
+
+          // Close menu
+          hamburger.classList.remove('active');
+          mobileNav.classList.remove('active');
+          body.style.overflow = 'auto';
+
+          // Smooth scroll to section
+          if (href.startsWith('#')) {
+            e.preventDefault();
+            const targetId = href.substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+              setTimeout(() => {
+                targetElement.scrollIntoView({
+                  behavior: 'smooth',
+                  block: 'start',
+                });
+              }, 100);
             }
+          }
         });
+      });
 
-        // Close menu and scroll to section when a link is clicked
-        navLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                
-                // Close menu
-                hamburger.classList.remove('active');
-                mobileNav.classList.remove('active');
-                body.style.overflow = 'auto';
-                
-                // Smooth scroll to section
-                if (href.startsWith('#')) {
-                    e.preventDefault();
-                    const targetId = href.substring(1);
-                    const targetElement = document.getElementById(targetId);
-                    
-                    if (targetElement) {
-                        setTimeout(() => {
-                            targetElement.scrollIntoView({
-                                behavior: 'smooth',
-                                block: 'start'
-                            });
-                        }, 100);
-                    }
-                }
-            });
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
-            if (!event.target.closest('.header-content') && !event.target.closest('#mobile-nav')) {
-                hamburger.classList.remove('active');
-                mobileNav.classList.remove('active');
-                body.style.overflow = 'auto';
-            }
-        });
+      // Close menu when clicking outside
+      document.addEventListener('click', function (event) {
+        if (
+          !event.target.closest('.header-content') &&
+          !event.target.closest('#mobile-nav')
+        ) {
+          hamburger.classList.remove('active');
+          mobileNav.classList.remove('active');
+          body.style.overflow = 'auto';
+        }
+      });
     </script>
-</body>
+  </body>
 </html>
