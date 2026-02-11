@@ -111,6 +111,16 @@
         margin-top: 10px;
       }
 
+      /* Hours Below Buttons */
+      .hours-text {
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+        color: var(--white);
+        margin-top: 15px;
+        grid-column: 1 / -1;
+      }
+
       /* Main Header */
       .main-header {
         background: var(--white);
@@ -121,7 +131,7 @@
       }
 
       .header-content {
-        max-width: 1200px;
+        max-width: 1100px;
         margin: 0 auto;
         padding: 20px;
         display: flex;
@@ -130,13 +140,9 @@
       }
 
       .logo {
-        font-size: 32px;
-        font-weight: bold;
-        color: var(--primary);
-      }
-
-      .logo span {
-        color: var(--secondary);
+        max-width: 200px;
+        height: auto;
+        display: block;
       }
 
       /* Desktop Navigation */
@@ -322,8 +328,7 @@
       .hero-content {
         max-width: 1200px;
         margin: 0 auto;
-        position :relative;
-        iteams-align: center;
+        position: relative;
         z-index: 1;
         text-align: center;
         display: flex;
@@ -805,6 +810,237 @@
         letter-spacing: 1px;
       }
 
+      /* About Section Styles */
+      .about-section {
+        font-family: 'Arial Black', Gadget, sans-serif;
+        background-color: #121212;
+      }
+
+      .about-hero {
+        padding: 100px 20px 150px 20px;
+        text-align: center;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+        background-size: cover;
+        background-position: center;
+      }
+
+      .about-hero h1 {
+        color: #ffffff;
+        font-size: 70px;
+        text-transform: uppercase;
+        margin: 0;
+        letter-spacing: 2px;
+      }
+
+      .about-hero p {
+        color: #ffffff;
+        font-size: 16px;
+        font-family: Arial, sans-serif;
+        margin-top: 10px;
+      }
+
+      .about-features {
+        background-color: #ff8c00;
+        clip-path: polygon(0 15%, 50% 0, 100% 15%, 100% 85%, 50% 100%, 0 85%);
+        padding: 120px 20px;
+        margin-top: -100px;
+        position: relative;
+        z-index: 10;
+      }
+
+      .about-content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 40px;
+      }
+
+      .about-text {
+        flex: 1;
+        min-width: 300px;
+        color: #ffffff;
+        padding: 20px;
+      }
+
+      .about-text h2 {
+        font-size: 55px;
+        text-transform: uppercase;
+        line-height: 1;
+        margin-bottom: 25px;
+      }
+
+      .about-text p {
+        font-family: Arial, sans-serif;
+        font-size: 15px;
+        line-height: 1.6;
+        max-width: 450px;
+      }
+
+      .about-cards {
+        flex: 1;
+        min-width: 300px;
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        align-items: stretch;
+        flex-wrap: wrap;
+      }
+
+      .about-card {
+        background-color: #1a1c1e;
+        color: #ffffff;
+        padding: 40px 20px;
+        width: 180px;
+        text-align: center;
+        border-radius: 2px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .about-card.white {
+        background-color: #ffffff;
+        color: #1a1c1e;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .about-card-icon {
+        margin-bottom: 20px;
+      }
+
+      .about-card h3 {
+        font-size: 18px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #ff8c00;
+        padding-bottom: 10px;
+      }
+
+      .about-card p {
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        line-height: 1.5;
+        opacity: 0.9;
+      }
+
+      .about-card.white p {
+        opacity: 0.8;
+      }
+
+      .about-story-section {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 80px 20px;
+        max-width: 1200px;
+        margin: auto;
+        gap: 50px;
+      }
+
+      .about-images {
+        position: relative;
+        width: 450px;
+        height: 500px;
+        flex-shrink: 0;
+      }
+
+      .about-image-1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 380px;
+        overflow: hidden;
+        border: 5px solid #ff851b;
+        z-index: 1;
+      }
+
+      .about-image-1 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .about-image-2 {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        width: 300px;
+        height: 350px;
+        overflow: hidden;
+        border: 5px solid #ff851b;
+        z-index: 3;
+      }
+
+      .about-image-2 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .about-quote-icon {
+        position: absolute;
+        top: -20px;
+        left: 220px;
+        z-index: 4;
+      }
+
+      .about-story-text {
+        flex: 1;
+        min-width: 300px;
+        max-width: 600px;
+      }
+
+      .about-story-text h1 {
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        line-height: 1.1;
+        letter-spacing: -2px;
+        color: #ffffff;
+      }
+
+      .about-story-text p {
+        font-family: Arial, sans-serif;
+        font-weight: normal;
+        line-height: 1.6;
+        font-size: 1.05rem;
+        color: #ffffff;
+        margin-bottom: 20px;
+      }
+
+      .about-story-text .bold {
+        font-weight: bold;
+        margin-bottom: 30px;
+      }
+
+      .about-social {
+        display: flex;
+        gap: 15px;
+      }
+
+      .about-social a {
+        background-color: #ffffff;
+        color: #001f3f;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 1.2rem;
+      }
+
+      .about-spacer {
+        height: 100px;
+        background-color: #121212;
+      }
+
       /* Reviews Section */
       .reviews {
         background: var(--primary);
@@ -914,6 +1150,12 @@
         color: var(--accent);
       }
 
+      .footer-logo {
+        max-width: 200px;
+        height: auto;
+        margin-bottom: 15px;
+      }
+
       .footer-bottom {
         text-align: center;
         padding-top: 30px;
@@ -985,6 +1227,10 @@
           position: relative;
         }
 
+        .logo {
+          max-width: 150px;
+        }
+
         .hero h1 {
           font-size: 42px;
         }
@@ -1009,45 +1255,6 @@
           text-align: center;
         }
 
-        .locations-container {
-          grid-template-columns: 1fr;
-        }
-        .phone-mockup {
-          width: 100%;
-          height: auto;
-        }
-        .header h1 {
-          font-size: 36px;
-        }
-        .header p {
-          font-size: 16px;
-        }
-        .location-card {
-          padding: 10px;
-        }
-        .service-name {
-          font-size: 14px;
-        }
-        .price-value {
-          font-size: 24px;
-        }
-        .price-description {
-          font-size: 10px;
-        }
-        .cta-button {
-          font-size: 12px;
-          padding: 10px;
-        }
-        .notes-section h2 {
-          font-size: 24px;
-        }
-        .note-item h3 {
-          font-size: 16px;
-        }
-        .note-item p {
-          font-size: 14px;
-        }
-
         /* Mobile popup adjustments */
         .call-popup {
           padding: 30px 20px;
@@ -1064,6 +1271,69 @@
         .call-option .phone {
           font-size: 18px;
         }
+
+        /* About Section Mobile */
+        .about-hero h1 {
+          font-size: 40px;
+        }
+
+        .about-hero p {
+          font-size: 14px;
+        }
+
+        .about-text h2 {
+          font-size: 32px;
+        }
+
+        .about-text p {
+          font-size: 14px;
+        }
+
+        .about-cards {
+          width: 100%;
+        }
+
+        .about-card {
+          width: 100%;
+          max-width: 300px;
+        }
+
+        .about-images {
+          width: 100%;
+          height: 400px;
+        }
+
+        .about-image-1 {
+          width: 180px;
+          height: 280px;
+        }
+
+        .about-image-2 {
+          width: 220px;
+          height: 280px;
+        }
+
+        .about-quote-icon {
+          left: 150px;
+          top: -10px;
+        }
+
+        .about-quote-icon svg {
+          width: 60px;
+          height: 60px;
+        }
+
+        .about-story-text h1 {
+          font-size: 2rem;
+        }
+
+        .about-story-text p {
+          font-size: 0.95rem;
+        }
+
+        .footer-logo {
+          max-width: 150px;
+        }
       }
 
       @media (max-width: 480px) {
@@ -1078,6 +1348,26 @@
 
         .call-popup p {
           font-size: 14px;
+        }
+
+        .logo {
+          max-width: 120px;
+        }
+
+        .about-hero h1 {
+          font-size: 32px;
+        }
+
+        .about-text h2 {
+          font-size: 28px;
+        }
+
+        .about-story-text h1 {
+          font-size: 1.8rem;
+        }
+
+        .footer-logo {
+          max-width: 120px;
         }
       }
     </style>
@@ -1105,10 +1395,6 @@
           >
             Visit Us
           </button>
-          <span
-            style="font-size: 18px; font-weight: bold; color: var(--dark-gray)"
-            >⏰ M-F: 8AM-7PM | Sat-Sun: 8AM-5PM</span
-          >
         </div>
 
         <!-- San Antonio Location -->
@@ -1130,10 +1416,11 @@
           >
             Visit Us
           </button>
-          <span
-            style="font-size: 18px; font-weight: bold; color: var(--dark-gray)"
-            >⏰ M-F: 8AM-7PM | Sat-Sun: 8AM-5PM</span
-          >
+        </div>
+
+        <!-- Centered Hours Below Buttons -->
+        <div class="hours-text">
+          ⏰ M-F: 8AM-7PM | Sat-Sun: 8AM-5PM
         </div>
       </div>
     </div>
@@ -1141,7 +1428,9 @@
     <!-- Main Header -->
     <header class="main-header">
       <div class="header-content">
-        <div class="logo">58 <span>ALIGNMENT</span></div>
+        <div>
+          <img class="logo" src="./assets/58logo.png" alt="58 Alignment Logo" />
+        </div>
         <!-- Desktop Navigation -->
         <nav id="desktop-nav">
           <ul>
@@ -1150,7 +1439,7 @@
             <li><a href="#services">Services</a></li>
             <li><a href="#reviews">Reviews</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="#About">About</a></li>
+            <li><a href="#about">About</a></li>
           </ul>
         </nav>
         <!-- Mobile Navigation -->
@@ -1161,10 +1450,10 @@
             <li><a href="#services">Services</a></li>
             <li><a href="#reviews">Reviews</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="#About">About</a></li>
+            <li><a href="#about">About</a></li>
           </ul>
         </nav>
-        <a href="tel:+16614140015" class="cta-button">Book Now</a>
+        <!-- <a href="tel:+16614140015" class="cta-button">Book Now</a> -->
         <div class="mobile-menu-toggle" id="mobile-menu-toggle">
           <span></span>
           <span></span>
@@ -1176,8 +1465,7 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
       <div class="hero-content">
-        <!-- <span class="hero-badge">🎯 FREE ALIGNMENT CHECK</span> -->
-        <h1>58 Truck   <span>And Trailer</span> Alignment</h1>
+        <h1>58 Truck <span>And Trailer</span> Alignment</h1>
         <p>
           Keep your truck or trailer running straight, safe, and efficient with
           our expert wheel alignment services. Serving Bakersfield, CA & San
@@ -1382,116 +1670,174 @@
       </div>
     </section>
 
+    <!-- About Us Section -->
+    <section id="about" class="about-section">
+      <div class="about-hero">
+        <h1>About Us</h1>
+        <p>Driven by purpose, defined by quality.</p>
+      </div>
 
-    <!-- About Us  section -->  
-     <section id="about">
+      <div class="about-features">
+        <div class="about-content-wrapper">
+          <div class="about-text">
+            <h2>What Sets Us Apart</h2>
+            <p>
+              We use advanced equipment, skilled technicians, and a
+              customer-first approach to deliver consistent, accurate results.
+            </p>
+          </div>
 
-      <div style="font-family: 'Arial Black', Gadget, sans-serif; margin: 0; padding: 0; background-color: #121212;">
-
-    <section style="padding: 100px 20px 150px 20px; text-align: center; background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('your-image-path.jpg'); background-size: cover; background-position: center;">
-        <h1 style="color: #ffffff; font-size: 70px; text-transform: uppercase; margin: 0; letter-spacing: 2px;">About Us</h1>
-        <p style="color: #ffffff; font-size: 16px; font-family: Arial, sans-serif; margin-top: 10px;">Driven by purpose, defined by quality.</p>
-    </section>
-
-    <section style="background-color: #FF8C00; clip-path: polygon(0 15%, 50% 0, 100% 15%, 100% 85%, 50% 100%, 0 85%); padding: 120px 20px; margin-top: -100px; position: relative; z-index: 10;">
-        <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
-            
-            <div style="flex: 1; min-width: 300px; color: #ffffff; padding: 20px;">
-                <h2 style="font-size: 55px; text-transform: uppercase; line-height: 1; margin-bottom: 25px;">What Sets Us Apart</h2>
-                <p style="font-family: Arial, sans-serif; font-size: 15px; line-height: 1.6; max-width: 450px;">
-                    We use advanced equipment, skilled technicians, and a customer-first approach to deliver consistent, accurate results.
-                </p>
-            </div>
-
-            <div style="flex: 1; min-width: 300px; display: flex; gap: 15px; justify-content: center; align-items: stretch;">
-                
-                <div style="background-color: #1a1c1e; color: #ffffff; padding: 40px 20px; width: 180px; text-align: center; border-radius: 2px; display: flex; flex-direction: column; align-items: center;">
-                    <div style="margin-bottom: 20px;">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FF8C00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
-                    </div>
-                    <h3 style="font-size: 18px; text-transform: uppercase; margin-bottom: 20px; border-bottom: 2px solid #FF8C00; padding-bottom: 10px;">Precision Alignment</h3>
-                    <p style="font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5; opacity: 0.9;">Accurate, heavy-duty alignment to keep your truck running straight and safe.</p>
-                </div>
-
-                <div style="background-color: #ffffff; color: #1a1c1e; padding: 40px 20px; width: 180px; text-align: center; border-radius: 2px; display: flex; flex-direction: column; align-items: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                    <div style="margin-bottom: 20px;">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FF8C00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                    </div>
-                    <h3 style="font-size: 18px; text-transform: uppercase; margin-bottom: 20px; border-bottom: 2px solid #FF8C00; padding-bottom: 10px;">Skilled Technicians</h3>
-                    <p style="font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5; opacity: 0.8;">Experienced professionals delivering reliable workmanship every time.</p>
-                </div>
-
-                <div style="background-color: #ffffff; color: #1a1c1e; padding: 40px 20px; width: 180px; text-align: center; border-radius: 2px; display: flex; flex-direction: column; align-items: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                    <div style="margin-bottom: 20px;">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FF8C00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-                    </div>
-                    <h3 style="font-size: 18px; text-transform: uppercase; margin-bottom: 20px; border-bottom: 2px solid #FF8C00; padding-bottom: 10px;">Advanced Equipment</h3>
-                    <p style="font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5; opacity: 0.8;">Modern alignment technology ensures faster, more precise results.</p>
-                </div>
-
-            </div>
-        </div>
-
-        <section style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; padding: 80px 20px; max-width: 1200px; margin: auto; gap: 50px;">
-        
-        <div style="position: relative; width: 450px; height: 500px;">
-            <div style="position: absolute; top: 0; left: 0; width: 250px; height: 380px; overflow: hidden; border: 5px solid #ff851b; z-index: 1;">
-                <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=400&q=80" alt="Truck Front" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            
-            <div style="position: absolute; bottom: 20px; right: 20px; width: 300px; height: 350px; overflow: hidden; border: 5px solid #ff851b; z-index: 3;">
-                <img src="https://images.unsplash.com/photo-1486006396193-471a2abc861a?auto=format&fit=crop&w=500&q=80" alt="Alignment Shop" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-
-            <div style="position: absolute; top: -20px; left: 220px; z-index: 4;">
-                <svg width="80" height="80" viewBox="0 0 24 24" fill="#ffffff">
-                    <path d="M14.017 21L14.017 18C14.017 14.686 16.703 12 20 12L20 10C16.134 10 13 13.134 13 17L13 21H14.017ZM3 21L3 18C3 14.686 5.686 12 9 12L9 10C5.134 10 2 13.134 2 17L2 21H3Z"></path>
+          <div class="about-cards">
+            <div class="about-card">
+              <div class="about-card-icon">
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#FF8C00"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+                  ></path>
                 </svg>
+              </div>
+              <h3>Precision Alignment</h3>
+              <p>
+                Accurate, heavy-duty alignment to keep your truck running
+                straight and safe.
+              </p>
             </div>
+
+            <div class="about-card white">
+              <div class="about-card-icon">
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#FF8C00"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"
+                  ></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <h3>Skilled Technicians</h3>
+              <p>
+                Experienced professionals delivering reliable workmanship every
+                time.
+              </p>
+            </div>
+
+            <div class="about-card white">
+              <div class="about-card-icon">
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#FF8C00"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path
+                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+                  ></path>
+                </svg>
+              </div>
+              <h3>Advanced Equipment</h3>
+              <p>
+                Modern alignment technology ensures faster, more precise
+                results.
+              </p>
+            </div>
+          </div>
         </div>
 
-        <div style="flex: 1; min-width: 300px; max-width: 600px;">
-            <h1 style="font-size: 3.5rem; text-transform: uppercase; margin-bottom: 20px; line-height: 1.1; letter-spacing: -2px;">
-                About 58 Truck & <br> Trailer Alignment
-            </h1>
-
-            <div style="font-family: Arial, sans-serif; font-weight: normal; line-height: 1.6; font-size: 1.05rem;">
-                <p style="margin-bottom: 20px;">
-                    Bakersfield 58 Truck & Trailer Alignment provides truck alignment services promptly and professionally. We eliminate the hassle of getting your semi truck, trailer, RV, bus or coach aligned, making your maintenance experience easy and stress-free.
-                </p>
-
-                <p style="margin-bottom: 20px;">
-                    We employ highly-trained truck alignment technicians and utilize state-of-the-art Hunter equipment for laser-precision diagnosis. We can find out quickly where the angles are off and adjust them accordingly. We can usually get your vehicle aligned the day you bring it in.
-                </p>
-
-                <p style="margin-bottom: 30px; font-weight: bold;">
-                    Call us today if you suspect your vehicle is out alignment causing uneven rapid tire wear, noisy steering, pulling to right or left or squealing tires.
-                </p>
+        <div class="about-story-section">
+          <div class="about-images">
+            <div class="about-image-1">
+              <img
+                src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=400&q=80"
+                alt="Truck Front"
+              />
             </div>
 
-            <div style="display: flex; gap: 15px;">
-                <a href="#" style="background-color: #ffffff; color: #001f3f; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; text-decoration: none; border-radius: 4px; font-size: 1.2rem;">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" style="background-color: #ffffff; color: #001f3f; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; text-decoration: none; border-radius: 4px; font-size: 1.2rem;">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#" style="background-color: #ffffff; color: #001f3f; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; text-decoration: none; border-radius: 4px; font-size: 1.2rem;">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="#" style="background-color: #ffffff; color: #001f3f; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; text-decoration: none; border-radius: 4px; font-size: 1.2rem;">
-                    <i class="fab fa-tiktok"></i>
-                </a>
+            <div class="about-image-2">
+              <img
+                src="https://images.unsplash.com/photo-1486006396193-471a2abc861a?auto=format&fit=crop&w=500&q=80"
+                alt="Alignment Shop"
+              />
             </div>
+
+            <div class="about-quote-icon">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="#ffffff">
+                <path
+                  d="M14.017 21L14.017 18C14.017 14.686 16.703 12 20 12L20 10C16.134 10 13 13.134 13 17L13 21H14.017ZM3 21L3 18C3 14.686 5.686 12 9 12L9 10C5.134 10 2 13.134 2 17L2 21H3Z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+
+          <div class="about-story-text">
+            <h1>About 58 Truck & <br />Trailer Alignment</h1>
+
+            <p>
+              Bakersfield 58 Truck & Trailer Alignment provides truck alignment
+              services promptly and professionally. We eliminate the hassle of
+              getting your semi truck, trailer, RV, bus or coach aligned, making
+              your maintenance experience easy and stress-free.
+            </p>
+
+            <p>
+              We employ highly-trained truck alignment technicians and utilize
+              state-of-the-art Hunter equipment for laser-precision diagnosis.
+              We can find out quickly where the angles are off and adjust them
+              accordingly. We can usually get your vehicle aligned the day you
+              bring it in.
+            </p>
+
+            <p class="bold">
+              Call us today if you suspect your vehicle is out alignment causing
+              uneven rapid tire wear, noisy steering, pulling to right or left
+              or squealing tires.
+            </p>
+
+            <div class="about-social">
+              <a href="https://www.facebook.com/58alignment" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://www.instagram.com/58alignments/" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+              
+                href="https://www.youtube.com/channel/UCCSUwucAzYd33vTpuQZrjXw"
+                target="_blank"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a href="#" target="_blank">
+                <i class="fab fa-tiktok"></i>
+              </a>
+            </div>
+          </div>
         </div>
+      </div>
 
+      <div class="about-spacer"></div>
     </section>
-    </section>
-
-    <div style="height: 100px; background-color: #121212;"></div>
-
-</div>
-     </section>
 
     <!-- Reviews Section -->
     <section class="reviews" id="reviews">
@@ -1499,7 +1845,7 @@
         <div class="section-header">
           <span class="section-badge">⭐ CUSTOMER REVIEWS</span>
           <h2>WHAT OUR CUSTOMERS SAY</h2>
-          <p style="color: #e0e0e0;">
+          <p style="color: #e0e0e0">
             Don't just take our word for it. See what truckers in Bakersfield
             and San Antonio are saying about our service.
           </p>
@@ -1559,7 +1905,11 @@
     <footer>
       <div class="footer-content">
         <div class="footer-section">
-          <h3>58 Alignment</h3>
+          <img
+            src="./assets/58logo.png"
+            alt="58 Alignment Logo"
+            class="footer-logo"
+          />
           <p>
             America's trusted heavy-duty alignment specialists serving
             California and Texas since 2010.
@@ -1624,7 +1974,9 @@
     <!-- Call Popup Modal -->
     <div class="call-popup-overlay" id="callPopup">
       <div class="call-popup">
-        <button class="call-popup-close" onclick="closeCallPopup()">&times;</button>
+        <button class="call-popup-close" onclick="closeCallPopup()">
+          &times;
+        </button>
         <h3>📞 Select Location to Call</h3>
         <p>Choose which store you'd like to contact</p>
         <div class="call-options">
@@ -1803,14 +2155,16 @@
       }
 
       // Close popup when clicking outside the modal
-      document.getElementById('callPopup').addEventListener('click', function(e) {
-        if (e.target === this) {
-          closeCallPopup();
-        }
-      });
+      document
+        .getElementById('callPopup')
+        .addEventListener('click', function (e) {
+          if (e.target === this) {
+            closeCallPopup();
+          }
+        });
 
       // Close popup on ESC key
-      document.addEventListener('keydown', function(e) {
+      document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') {
           closeCallPopup();
         }
