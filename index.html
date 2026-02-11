@@ -20,6 +20,9 @@
       rel="stylesheet"
     />
 
+    <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DToQ4SBIvK5t2FxlOe8IhgaDV7o57YkY6l9KYgQJqC5emo7iF6BrO0Ipgz6x8g5h1x2pB8ZLGoo" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <style>
       * {
         margin: 0;
@@ -150,6 +153,11 @@
         display: flex;
         list-style: none;
         gap: 30px;
+        position: relative;
+      }
+
+      nav li {
+        position: relative;
       }
 
       nav a {
@@ -157,10 +165,66 @@
         text-decoration: none;
         font-weight: 600;
         transition: color 0.3s;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 5px 0;
       }
 
       nav a:hover {
         color: var(--secondary);
+      }
+
+      /* Dropdown styles for navbar */
+      .nav-dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: var(--white);
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        min-width: 200px;
+        padding: 10px 0;
+      }
+
+      .nav-dropdown.active {
+        display: block;
+      }
+
+      .nav-dropdown a {
+        display: block;
+        padding: 10px 20px;
+        color: var(--dark-gray);
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        border-bottom: 1px solid transparent;
+        white-space: nowrap;
+      }
+
+      .nav-dropdown a:hover {
+        background: var(--light);
+        color: var(--secondary);
+        border-bottom-color: var(--secondary);
+      }
+
+      .nav-dropdown a:first-child {
+        border-radius: 8px 8px 0 0;
+      }
+
+      .nav-dropdown a:last-child {
+        border-radius: 0 0 8px 8px;
+        border-bottom: none;
+      }
+
+      /* Dropdown arrow */
+      .nav-arrow {
+        font-size: 10px;
+        transition: transform 0.3s ease;
       }
 
       .cta-button {
@@ -323,7 +387,7 @@
         max-width: 1200px;
         margin: 0 auto;
         position :relative;
-        iteams-align: center;
+        align-items: center;
         z-index: 1;
         text-align: center;
         display: flex;
@@ -455,13 +519,13 @@
       }
 
       .section-header h2 {
-        font-size: 48px;
+        font-size: 36px;
         color: var(--primary);
         margin-bottom: 15px;
       }
 
       .section-header p {
-        font-size: 18px;
+        font-size: 16px;
         color: var(--dark-gray);
         max-width: 600px;
         margin: 0 auto;
@@ -612,6 +676,62 @@
         font-size: 28px;
         color: var(--primary);
         margin-bottom: 15px;
+        position: relative;
+      }
+
+      .service-content h3::after {
+        content: '▼';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 12px;
+        color: var(--secondary);
+        transition: transform 0.3s ease;
+      }
+
+      .service-dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        min-width: 200px;
+      }
+
+      .service-dropdown.active {
+        display: block;
+      }
+
+      .service-dropdown a {
+        display: block;
+        padding: 12px 16px;
+        color: var(--dark-gray);
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        border-bottom: 1px solid transparent;
+      }
+
+      .service-dropdown a:hover {
+        background: var(--light);
+        color: var(--secondary);
+        border-bottom-color: var(--secondary);
+      }
+
+      .service-dropdown a:first-child {
+        border-radius: 8px 8px 0 0;
+      }
+
+      .service-dropdown a:last-child {
+        border-radius: 0 0 8px 8px;
+        border-bottom: none;
       }
 
       .service-content p {
@@ -970,6 +1090,15 @@
       @media (max-width: 768px) {
         .top-bar-content {
           grid-template-columns: 1fr;
+          gap: 15px;
+        }
+
+        .location-info {
+          text-align: center;
+        }
+
+        .social-links {
+          justify-content: center;
         }
 
         nav {
@@ -987,14 +1116,29 @@
 
         .hero h1 {
           font-size: 42px;
+          line-height: 1.2;
         }
 
         .hero p {
           font-size: 16px;
+          line-height: 1.5;
         }
 
-        .section-header h2 {
-          font-size: 36px;
+        .hero {
+          padding: 60px 15px;
+        }
+
+        .trust-content {
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        .trust-item {
+          font-size: 16px;
+        }
+
+        .trust-icon {
+          font-size: 24px;
         }
 
         .sticky-mobile-cta {
@@ -1048,21 +1192,484 @@
           font-size: 14px;
         }
 
+        .section-header p {
+          font-size: 14px;
+          margin-bottom: 20px;
+        }
+
+        .pricing-grid {
+          display: flex;
+          gap: 15px;
+          overflow-x: auto;
+          padding-bottom: 10px;
+        }
+
+        .pricing-card {
+          min-width: 280px;
+          padding: 20px 15px;
+        }
+
+        .pricing-card h3 {
+          font-size: 20px;
+        }
+
+        .price {
+          font-size: 32px;
+        }
+
+        .services {
+          padding: 30px 15px;
+        }
+
+        .services-grid {
+          display: flex;
+          gap: 15px;
+          overflow-x: auto;
+          padding-bottom: 10px;
+        }
+
+        .service-card {
+          min-width: 280px;
+        }
+
+        .service-icon {
+          padding: 30px;
+          font-size: 40px;
+        }
+
+        .service-content {
+          padding: 15px;
+        }
+
+        .service-content h3 {
+          font-size: 18px;
+        }
+
         /* Mobile popup adjustments */
         .call-popup {
           padding: 30px 20px;
         }
 
         .call-popup h3 {
-          font-size: 24px;
+          font-size: 20px;
         }
 
         .call-option {
-          padding: 16px 15px;
+          padding: 12px 15px;
         }
 
-        .call-option .phone {
-          font-size: 18px;
+        .reviews {
+          padding: 30px 15px;
+        }
+
+        .reviews-grid {
+          display: flex;
+          gap: 15px;
+          overflow-x: auto;
+          padding-bottom: 10px;
+        }
+
+        .review-card {
+          min-width: 280px;
+          padding: 15px;
+        }
+
+        .review-text {
+          font-size: 14px;
+        }
+
+        .cta-section {
+          padding: 30px 15px;
+        }
+
+        .cta-section h2 {
+          font-size: 24px;
+          margin-bottom: 15px;
+        }
+
+        .cta-section p {
+          font-size: 14px;
+          margin-bottom: 20px;
+        }
+
+        .cta-buttons {
+          flex-direction: row;
+          gap: 10px;
+          justify-content: center;
+        }
+
+        .free-check-banner {
+          padding: 20px 15px;
+          margin-top: 20px;
+        }
+
+        .free-check-banner h3 {
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
+
+        .free-check-banner p {
+          font-size: 14px;
+          margin-bottom: 15px;
+        }
+
+        #about h1[style*="font-size: 3.5rem"] {
+          font-size: 22px !important;
+        }
+
+        #about div[style*="width: 450px"] {
+          max-width: 300px !important;
+        }
+
+        /* Additional mobile optimizations */
+        .pricing {
+          padding: 60px 15px;
+        }
+
+        .services {
+          padding: 60px 15px;
+        }
+
+        .reviews {
+          padding: 60px 15px;
+        }
+
+        .cta-section {
+          padding: 60px 15px;
+        }
+
+        .cta-section h2 {
+          font-size: 32px;
+        }
+
+        .cta-section p {
+          font-size: 16px;
+        }
+
+        .free-check-banner {
+          padding: 30px 20px;
+        }
+
+        .free-check-banner h3 {
+          font-size: 28px;
+        }
+
+        .free-check-banner p {
+          font-size: 16px;
+        }
+
+        /* About section mobile overrides */
+        #about section[style*="font-family: 'Arial Black'"] {
+          padding: 30px 15px !important;
+        }
+
+        #about section[style*="font-size: 70px"] {
+          font-size: 28px !important;
+          margin-bottom: 10px !important;
+        }
+
+        #about section[style*="font-size: 55px"] {
+          font-size: 24px !important;
+          line-height: 1.2 !important;
+          margin-bottom: 15px !important;
+        }
+
+        #about section[style*="padding: 120px 20px"] {
+          padding: 30px 15px !important;
+          margin-top: 0 !important;
+          clip-path: none !important;
+        }
+
+        #about section[style*="padding: 80px 20px"] {
+          padding: 30px 15px !important;
+          gap: 20px !important;
+          flex-direction: column !important;
+        }
+
+        #about div[style*="width: 450px"] {
+          width: 100% !important;
+          height: auto !important;
+          max-width: 300px !important;
+          margin: 0 auto 20px !important;
+        }
+
+        #about div[style*="width: 250px"] {
+          width: 100% !important;
+          height: 180px !important;
+        }
+
+        #about div[style*="width: 300px"] {
+          width: 100% !important;
+          height: 200px !important;
+        }
+
+        #about h1[style*="font-size: 3.5rem"] {
+          font-size: 20px !important;
+          line-height: 1.3 !important;
+          margin-bottom: 15px !important;
+        }
+
+        #about div[style*="font-size: 1.05rem"] {
+          font-size: 13px !important;
+        }
+
+        #about div[style*="display: flex; gap: 15px"] {
+          justify-content: center !important;
+          margin-top: 15px !important;
+          flex-wrap: wrap !important;
+          gap: 10px !important;
+        }
+
+        #about div[style*="display: flex; gap: 15px"] a {
+          background-color: #ffffff !important;
+          color: #001f3f !important;
+          width: 40px !important;
+          height: 40px !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          text-decoration: none !important;
+          border-radius: 8px !important;
+          font-size: 16px !important;
+          transition: all 0.3s ease !important;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+        }
+
+        #about div[style*="display: flex; gap: 15px"] a:hover {
+          transform: translateY(-2px) !important;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+          background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%) !important;
+        }
+
+        #about div[style*="background-color: #1a1c1e"] {
+          width: 100% !important;
+          max-width: 250px !important;
+          margin-bottom: 15px !important;
+          padding: 20px 12px !important;
+        }
+
+        #about div[style*="background-color: #ffffff"][style*="box-shadow"] {
+          width: 100% !important;
+          max-width: 250px !important;
+          margin-bottom: 15px !important;
+          padding: 20px 12px !important;
+        }
+
+        #about h3[style*="font-size: 18px"] {
+          font-size: 14px !important;
+          margin-bottom: 12px !important;
+        }
+
+        #about p[style*="font-size: 12px"] {
+          font-size: 11px !important;
+        }
+
+        /* Fix overlapping issues in About section */
+        #about section[style*="display: flex; flex-wrap: wrap"] {
+          flex-direction: column !important;
+          padding: 30px 15px !important;
+          gap: 20px !important;
+        }
+
+        #about div[style*="position: relative"] {
+          position: static !important;
+          width: 100% !important;
+          height: auto !important;
+          margin-bottom: 20px !important;
+          display: flex !important;
+          flex-direction: column !important;
+          align-items: center !important;
+        }
+
+        #about div[style*="position: absolute"] {
+          position: static !important;
+          width: 100% !important;
+          max-width: 280px !important;
+          height: 180px !important;
+          margin-bottom: 15px !important;
+          border: 3px solid #ff851b !important;
+        }
+
+        #about div[style*="top: -20px"] {
+          position: static !important;
+          margin: 15px 0 !important;
+        }
+
+        /* Horizontal scroll for About section features */
+        #about section[style*="display: flex; gap: 15px; justify-content: center"] {
+          display: flex !important;
+          flex-direction: row !important;
+          gap: 10px !important;
+          overflow-x: auto !important;
+          padding-bottom: 10px !important;
+          justify-content: flex-start !important;
+        }
+
+        #about section[style*="display: flex; flex-wrap: wrap; align-items: center"] {
+          display: flex !important;
+          flex-direction: column !important;
+          gap: 20px !important;
+          padding: 30px 15px !important;
+        }
+
+        /* Footer improvements */
+        footer {
+          padding: 30px 15px 15px !important;
+        }
+
+        .footer-content {
+          display: flex !important;
+          gap: 20px !important;
+          overflow-x: auto !important;
+          padding-bottom: 10px;
+          text-align: left !important;
+        }
+
+        .footer-section {
+          min-width: 250px !important;
+          text-align: left !important;
+          margin-bottom: 0 !important;
+        }
+
+        .footer-section h3 {
+          font-size: 20px !important;
+          margin-bottom: 15px !important;
+        }
+
+        .footer-section p {
+          font-size: 14px !important;
+          line-height: 1.5 !important;
+        }
+
+        .footer-section ul li {
+          font-size: 14px !important;
+          margin-bottom: 8px !important;
+        }
+
+        .social-links a {
+          display: flex !important;
+          align-items: center !important;
+          gap: 8px !important;
+          color: var(--light) !important;
+          text-decoration: none !important;
+          transition: color 0.3s !important;
+          padding: 8px 12px !important;
+          border-radius: 5px !important;
+          background: rgba(255, 255, 255, 0.1) !important;
+        }
+
+        .social-links a:hover {
+          color: var(--accent) !important;
+          background: rgba(255, 107, 53, 0.2) !important;
+        }
+
+        .social-links i {
+          font-size: 16px !important;
+          width: 20px !important;
+          text-align: center !important;
+          display: inline-block !important;
+          line-height: 1 !important;
+          font-style: normal !important;
+          font-weight: normal !important;
+          color: var(--light) !important;
+        }
+
+        .social-links span {
+          font-size: 14px !important;
+          font-weight: 500 !important;
+        }
+
+        /* Ensure Font Awesome icons are visible */
+        .fab, .fas, .fa-brands, .fa-regular, .fa-solid, .fa-light, .fa-thin, .fa-duotone, .fa-kit {
+          display: inline-block !important;
+          font-family: "Font Awesome 6 Free" !important;
+          font-style: normal !important;
+          font-weight: normal !important;
+          font-variant: normal !important;
+          text-rendering: auto !important;
+          -webkit-font-smoothing: antialiased !important;
+          -moz-osx-font-smoothing: grayscale !important;
+          speak: none;
+          line-height: 1 !important;
+          text-align: center !important;
+          width: 1em !important;
+          height: 1em !important;
+        }
+
+        /* Force Font Awesome to load */
+        .fa-facebook-f:before,
+        .fa-instagram:before,
+        .fa-youtube:before {
+          font-family: "Font Awesome 6 Brands" !important;
+          font-weight: 400;
+        }
+
+        /* Additional visibility fixes */
+        .social-links a i {
+          visibility: visible !important;
+          opacity: 1 !important;
+          display: block !important;
+          position: relative !important;
+          z-index: 1 !important;
+        }
+
+        .social-links a i:before {
+          visibility: visible !important;
+        }
+
+        .social-links a span {
+          visibility: visible !important;
+        }
+
+        /* Footer social links specific targeting */
+        footer .social-links a i {
+          font-size: 20px !important;
+          color: #1877f2 !important;
+          display: inline-block !important;
+          text-align: center !important;
+          width: 24px !important;
+          height: 24px !important;
+          line-height: 24px !important;
+          font-family: "Font Awesome 6 Brands" !important;
+          font-weight: 400 !important;
+        }
+
+        footer .social-links a i.fa-facebook-f:before {
+          content: "\f39e" !important;
+        }
+
+        footer .social-links a i.fa-instagram:before {
+          content: "\f16d" !important;
+        }
+
+        footer .social-links a i.fa-youtube:before {
+          content: "\f167" !important;
+        }
+
+        /* Force footer icons visibility */
+        footer .social-links a {
+          background: rgba(255, 255, 255, 0.2) !important;
+          border: 1px solid rgba(255, 255, 255, 0.3) !important;
+          padding: 10px 15px !important;
+          border-radius: 8px !important;
+          min-width: 44px !important;
+          min-height: 44px !important;
+        }
+
+        footer .social-links a:hover {
+          background: rgba(255, 107, 53, 0.3) !important;
+          border-color: rgba(255, 107, 53, 0.5) !important;
+          transform: translateY(-2px) !important;
+        }
+
+        #about div[style*="background-color: #ffffff"][style*="box-shadow"] {
+          padding: 25px 12px !important;
+        }
+
+        .footer-bottom {
+          padding-top: 20px !important;
+          font-size: 12px !important;
+          text-align: center !important;
         }
       }
 
@@ -1078,6 +1685,68 @@
 
         .call-popup p {
           font-size: 14px;
+        }
+
+        /* Extra small mobile optimizations */
+        #about section[style*="font-size: 70px"] {
+          font-size: 28px !important;
+        }
+
+        #about section[style*="font-size: 55px"] {
+          font-size: 24px !important;
+        }
+
+        #about h1[style*="font-size: 3.5rem"] {
+          font-size: 22px !important;
+        }
+
+        #about div[style*="width: 450px"] {
+          max-width: 300px !important;
+        }
+
+        #about div[style*="background-color: #1a1c1e"] {
+          padding: 25px 12px !important;
+        }
+
+        #about div[style*="background-color: #ffffff"][style*="box-shadow"] {
+          padding: 25px 12px !important;
+        }
+
+        #about h3[style*="font-size: 18px"] {
+          font-size: 15px !important;
+        }
+
+        #about p[style*="font-size: 12px"] {
+          font-size: 12px !important;
+        }
+
+        .footer-section h3 {
+          font-size: 18px !important;
+        }
+
+        .footer-section p,
+        .footer-section ul li {
+          font-size: 13px !important;
+        }
+
+        .hero h1 {
+          font-size: 32px !important;
+        }
+
+        .section-header h2 {
+          font-size: 28px !important;
+        }
+
+        .pricing-card h3 {
+          font-size: 20px !important;
+        }
+
+        .price {
+          font-size: 36px !important;
+        }
+
+        .service-content h3 {
+          font-size: 18px !important;
         }
       }
     </style>
@@ -1141,16 +1810,30 @@
     <!-- Main Header -->
     <header class="main-header">
       <div class="header-content">
-        <div class="logo">58 <span>ALIGNMENT</span></div>
+        <a href="#home" class="logo" style="text-decoration: none; color: inherit;">58 <span>ALIGNMENT</span></a>
         <!-- Desktop Navigation -->
         <nav id="desktop-nav">
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#services">Services</a></li>
+            <li>
+              <a href="#home">Home</a>
+            </li>
+            <li>
+              <a href="#pricing">Pricing</a>
+            </li>
+            <li>
+              <a href="#services" onclick="toggleNavDropdown(event, 'services-dropdown')">
+                Services <span class="nav-arrow">▼</span>
+              </a>
+              <div class="nav-dropdown" id="services-dropdown">
+                <a href="#services">Wheel Alignment</a>
+                <a href="#services">Truck Suspension</a>
+                <a href="#services">Air Ride Control</a>
+                <a href="#services">Brake Service</a>
+              </div>
+            </li>
             <li><a href="#reviews">Reviews</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="#About">About</a></li>
+            <li><a href="#about">About</a></li>
           </ul>
         </nav>
         <!-- Mobile Navigation -->
@@ -1158,13 +1841,21 @@
           <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#services">Services</a></li>
+            <li><a href="#services" onclick="toggleNavDropdown(event, 'services-dropdown')">
+                Services <span class="nav-arrow">▼</span>
+              </a>
+              <div class="nav-dropdown" id="services-dropdown">
+                <a href="#services">Wheel Alignment</a>
+                <a href="#services">Truck Suspension</a>
+                <a href="#services">Air Ride Control</a>
+                <a href="#services">Brake Service</a>
+              </div>
+            </li>
             <li><a href="#reviews">Reviews</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="#About">About</a></li>
+            <li><a href="#about">About</a></li>
           </ul>
         </nav>
-        <a href="tel:+16614140015" class="cta-button">Book Now</a>
         <div class="mobile-menu-toggle" id="mobile-menu-toggle">
           <span></span>
           <span></span>
@@ -1306,7 +1997,13 @@
             </div>
           </div>
           <div class="service-content">
-            <h3>Wheel Alignment</h3>
+            <h3 onclick="toggleServiceDropdown(this)">Wheel Alignment</h3>
+            <div class="service-dropdown">
+              <a href="#wheel-alignment">Complete Front-End Alignment</a>
+              <a href="#hunter-alignment">Hunter Laser Precision</a>
+              <a href="#axle-alignment">Axle Alignment Check</a>
+              <a href="#tire-alignment">Tire Wear Analysis</a>
+            </div>
             <p>
               Precision laser alignment for trucks, trailers, RVs, buses, and
               coaches using advanced Hunter equipment.
@@ -1327,7 +2024,13 @@
             </div>
           </div>
           <div class="service-content">
-            <h3>Truck Suspension</h3>
+            <h3 onclick="toggleServiceDropdown(this)">Truck Suspension</h3>
+            <div class="service-dropdown">
+              <a href="#suspension-inspection">Complete Suspension Inspection</a>
+              <a href="#shock-replacement">Shock & Strut Replacement</a>
+              <a href="#leaf-spring">Leaf Spring Service</a>
+              <a href="#air-suspension">Air Suspension Repair</a>
+            </div>
             <p>
               Complete suspension inspection, repair, and replacement to ensure
               smooth, safe operation.
@@ -1348,7 +2051,13 @@
             </div>
           </div>
           <div class="service-content">
-            <h3>Air Ride Control</h3>
+            <h3 onclick="toggleServiceDropdown(this)">Air Ride Control</h3>
+            <div class="service-dropdown">
+              <a href="#air-ride-diagnosis">Air Ride Diagnosis</a>
+              <a href="#air-spring-service">Air Spring Service</a>
+              <a href="#compressor-repair">Compressor Repair</a>
+              <a href="#leveling-system">Leveling System Service</a>
+            </div>
             <p>
               Expert air suspension diagnostics and repair for optimal ride
               quality and load management.
@@ -1369,7 +2078,13 @@
             </div>
           </div>
           <div class="service-content">
-            <h3>Brake Service</h3>
+            <h3 onclick="toggleServiceDropdown(this)">Brake Service</h3>
+            <div class="service-dropdown">
+              <a href="#brake-inspection">Brake Inspection</a>
+              <a href="#brake-repair">Brake Repair</a>
+              <a href="#brake-replacement">Brake Replacement</a>
+              <a href="#abs-service">ABS Service</a>
+            </div>
             <p>
               Professional brake inspection, adjustment, and repair to keep your
               vehicle stopping safely.
@@ -1470,16 +2185,16 @@
             </div>
 
             <div style="display: flex; gap: 15px;">
-                <a href="#" style="background-color: #ffffff; color: #001f3f; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; text-decoration: none; border-radius: 4px; font-size: 1.2rem;">
+                <a href="https://www.facebook.com/58alignment" target="_blank" style="background-color: #ffffff; color: #001f3f; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; text-decoration: none; border-radius: 4px; font-size: 1.2rem;">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="#" style="background-color: #ffffff; color: #001f3f; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; text-decoration: none; border-radius: 4px; font-size: 1.2rem;">
+                <a href="https://www.instagram.com/58alignments/" target="_blank" style="background-color: #ffffff; color: #001f3f; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; text-decoration: none; border-radius: 4px; font-size: 1.2rem;">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href="#" style="background-color: #ffffff; color: #001f3f; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; text-decoration: none; border-radius: 4px; font-size: 1.2rem;">
+                <a href="https://www.youtube.com/channel/UCCSUwucAzYd33vTpuQZrjXw" target="_blank" style="background-color: #ffffff; color: #001f3f; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; text-decoration: none; border-radius: 4px; font-size: 1.2rem;">
                     <i class="fab fa-youtube"></i>
                 </a>
-                <a href="#" style="background-color: #ffffff; color: #001f3f; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; text-decoration: none; border-radius: 4px; font-size: 1.2rem;">
+                <a href="https://www.tiktok.com/@58alignment" target="_blank" style="background-color: #ffffff; color: #001f3f; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; text-decoration: none; border-radius: 4px; font-size: 1.2rem;">
                     <i class="fab fa-tiktok"></i>
                 </a>
             </div>
@@ -1564,18 +2279,19 @@
             America's trusted heavy-duty alignment specialists serving
             California and Texas since 2010.
           </p>
-          <div class="social-links" style="margin-top: 20px">
-            <a href="https://www.facebook.com/58alignment" target="_blank"
-              >Facebook</a
-            >
-            <a href="https://www.instagram.com/58alignments/" target="_blank"
-              >Instagram</a
-            >
-            
-              href="https://www.youtube.com/channel/UCCSUwucAzYd33vTpuQZrjXw"
-              target="_blank"
-              >YouTube</a
-            >
+          <div class="social-links" style="margin-top: 20px; display: flex; gap: 15px; justify-content: center;">
+            <a href="https://www.facebook.com/58alignment" target="_blank" style="color: var(--light); text-decoration: none;">
+              <i class="fab fa-facebook-f" style="font-size: 24px; color: #1877f2; margin-right: 8px;"></i>
+              Facebook
+            </a>
+            <a href="https://www.instagram.com/58alignments/" target="_blank" style="color: var(--light); text-decoration: none;">
+              <i class="fab fa-instagram" style="font-size: 24px; color: #e4405f; margin-right: 8px;"></i>
+              Instagram
+            </a>
+            <a href="https://www.youtube.com/channel/UCCSUwucAzYd33vTpuQZrjXw" target="_blank" style="color: var(--light); text-decoration: none;">
+              <i class="fab fa-youtube" style="font-size: 24px; color: #ff0000; margin-right: 8px;"></i>
+              YouTube
+            </a>
           </div>
         </div>
 
@@ -1786,6 +2502,95 @@
           hamburger.classList.remove('active');
           mobileNav.classList.remove('active');
           body.style.overflow = 'auto';
+        }
+      });
+    </script>
+
+    <!-- Navbar Dropdown JavaScript -->
+    <script>
+      function toggleNavDropdown(event, dropdownId) {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        const dropdown = document.getElementById(dropdownId);
+        const allDropdowns = document.querySelectorAll('.nav-dropdown');
+        const allArrows = document.querySelectorAll('.nav-arrow');
+        
+        // Close all other dropdowns
+        allDropdowns.forEach(d => {
+          if (d !== dropdown) {
+            d.classList.remove('active');
+          }
+        });
+        
+        // Toggle current dropdown
+        dropdown.classList.toggle('active');
+        
+        // Update arrow rotation - find the arrow within the clicked link
+        const clickedLink = event.target.closest('a');
+        const currentArrow = clickedLink ? clickedLink.querySelector('.nav-arrow') : null;
+        
+        allArrows.forEach(arrow => {
+          if (arrow !== currentArrow) {
+            arrow.style.transform = 'rotate(0deg)';
+          }
+        });
+        
+        if (currentArrow && dropdown.classList.contains('active')) {
+          currentArrow.style.transform = 'rotate(180deg)';
+        } else if (currentArrow) {
+          currentArrow.style.transform = 'rotate(0deg)';
+        }
+      }
+
+      // Close dropdowns when clicking outside
+      document.addEventListener('click', function(event) {
+        if (!event.target.closest('#desktop-nav') && !event.target.closest('#mobile-nav')) {
+          const allDropdowns = document.querySelectorAll('.nav-dropdown');
+          const allArrows = document.querySelectorAll('.nav-arrow');
+          
+          allDropdowns.forEach(d => d.classList.remove('active'));
+          allArrows.forEach(arrow => arrow.style.transform = 'rotate(0deg)');
+        }
+      });
+    </script>
+
+    <!-- Service Dropdown JavaScript -->
+    <script>
+      function toggleServiceDropdown(element) {
+        const dropdown = element.nextElementSibling;
+        const allDropdowns = document.querySelectorAll('.service-dropdown');
+        
+        // Close all other dropdowns
+        allDropdowns.forEach(d => {
+          if (d !== dropdown) {
+            d.classList.remove('active');
+          }
+        });
+        
+        // Toggle current dropdown
+        dropdown.classList.toggle('active');
+        
+        // Rotate arrow
+        const arrow = element.querySelector('h3');
+        if (dropdown.classList.contains('active')) {
+          arrow.style.transform = 'translateY(-50%) rotate(180deg)';
+        } else {
+          arrow.style.transform = 'translateY(-50%) rotate(0deg)';
+        }
+      }
+
+      // Close dropdowns when clicking outside
+      document.addEventListener('click', function(event) {
+        if (!event.target.closest('.service-content')) {
+          const allDropdowns = document.querySelectorAll('.service-dropdown');
+          allDropdowns.forEach(d => d.classList.remove('active'));
+          
+          // Reset all arrows
+          const allArrows = document.querySelectorAll('.service-content h3');
+          allArrows.forEach(arrow => {
+            arrow.style.transform = 'translateY(-50%) rotate(0deg)';
+          });
         }
       });
     </script>
