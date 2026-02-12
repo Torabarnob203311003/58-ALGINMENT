@@ -47,6 +47,7 @@
         color: var(--dark-gray);
         line-height: 1.6;
         overflow-x: hidden;
+        scroll-behavior: smooth;
       }
 
       /* Typography */
@@ -851,7 +852,7 @@
       .about-features {
         background-color: #ff8c00;
         clip-path: polygon(0 15%, 50% 0, 100% 15%, 100% 85%, 50% 100%, 0 85%);
-        padding: 120px 20px;
+        padding: 150px 20px 120px 20px;
         margin-top: -100px;
         position: relative;
         z-index: 10;
@@ -1315,7 +1316,7 @@
 
         .about-features {
           clip-path: polygon(0 10%, 50% 0, 100% 10%, 100% 90%, 50% 100%, 0 90%);
-          padding: 80px 20px;
+          padding: 100px 20px 80px 20px;
           margin-top: -60px;
         }
 
@@ -1502,7 +1503,13 @@
     <header class="main-header">
       <div class="header-content">
         <div>
-          <img class="logo" src="./assets/58logo.png" alt="58 Alignment Logo" />
+          <a href="#home" style="cursor: pointer">
+            <img
+              class="logo"
+              src="./assets/58logo.png"
+              alt="58 Alignment Logo"
+            />
+          </a>
         </div>
         <!-- Desktop Navigation -->
         <nav id="desktop-nav">
@@ -1976,11 +1983,13 @@
     <footer>
       <div class="footer-content">
         <div class="footer-section">
-          <img
-            src="./assets/58logo.png"
-            alt="58 Alignment Logo"
-            class="footer-logo"
-          />
+          <a href="#home" style="cursor: pointer">
+            <img
+              src="./assets/58logo.png"
+              alt="58 Alignment Logo"
+              class="footer-logo"
+            />
+          </a>
           <p>
             America's trusted heavy-duty alignment specialists serving
             California and Texas since 2010.
