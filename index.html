@@ -20,6 +20,12 @@
       rel="stylesheet"
     />
 
+    <!-- Font Awesome for Social Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
     <style>
       * {
         margin: 0;
@@ -819,7 +825,10 @@
       .about-hero {
         padding: 100px 20px 150px 20px;
         text-align: center;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+        background-image: linear-gradient(
+          rgba(0, 0, 0, 0.8),
+          rgba(0, 0, 0, 0.8)
+        );
         background-size: cover;
         background-position: center;
       }
@@ -1256,24 +1265,46 @@
           text-align: center;
         }
 
-        /* Mobile popup adjustments */
+        /* Mobile popup adjustments - HORIZONTAL LAYOUT */
         .call-popup {
           padding: 30px 20px;
+          max-width: 95%;
         }
 
         .call-popup h3 {
-          font-size: 24px;
+          font-size: 20px;
+          margin-bottom: 8px;
+        }
+
+        .call-popup p {
+          font-size: 13px;
+          margin-bottom: 20px;
+        }
+
+        .call-options {
+          flex-direction: row;
+          gap: 10px;
         }
 
         .call-option {
-          padding: 16px 15px;
+          padding: 14px 10px;
+          flex: 1;
         }
 
         .call-option .phone {
-          font-size: 18px;
+          font-size: 16px;
+        }
+
+        .call-option .location {
+          font-size: 11px;
+          margin-top: 3px;
         }
 
         /* About Section Mobile */
+        .about-hero {
+          padding: 60px 20px 100px 20px;
+        }
+
         .about-hero h1 {
           font-size: 40px;
         }
@@ -1282,46 +1313,77 @@
           font-size: 14px;
         }
 
+        .about-features {
+          clip-path: polygon(0 10%, 50% 0, 100% 10%, 100% 90%, 50% 100%, 0 90%);
+          padding: 80px 20px;
+          margin-top: -60px;
+        }
+
+        .about-content-wrapper {
+          flex-direction: column;
+          gap: 30px;
+        }
+
+        .about-text {
+          text-align: center;
+          padding: 10px;
+        }
+
         .about-text h2 {
           font-size: 32px;
         }
 
         .about-text p {
           font-size: 14px;
+          max-width: 100%;
         }
 
         .about-cards {
           width: 100%;
+          flex-direction: column;
         }
 
         .about-card {
           width: 100%;
-          max-width: 300px;
+          max-width: 100%;
+        }
+
+        .about-story-section {
+          flex-direction: column;
+          padding: 60px 20px;
+          gap: 30px;
         }
 
         .about-images {
           width: 100%;
-          height: 400px;
+          max-width: 350px;
+          height: 350px;
         }
 
         .about-image-1 {
-          width: 180px;
-          height: 280px;
+          width: 160px;
+          height: 240px;
         }
 
         .about-image-2 {
-          width: 220px;
-          height: 280px;
+          width: 200px;
+          height: 240px;
+          bottom: 10px;
+          right: 10px;
         }
 
         .about-quote-icon {
-          left: 150px;
+          left: 130px;
           top: -10px;
         }
 
         .about-quote-icon svg {
-          width: 60px;
-          height: 60px;
+          width: 50px;
+          height: 50px;
+        }
+
+        .about-story-text {
+          text-align: center;
         }
 
         .about-story-text h1 {
@@ -1330,6 +1392,10 @@
 
         .about-story-text p {
           font-size: 0.95rem;
+        }
+
+        .about-social {
+          justify-content: center;
         }
 
         .footer-logo {
@@ -1344,11 +1410,19 @@
         }
 
         .call-popup h3 {
-          font-size: 22px;
+          font-size: 18px;
         }
 
         .call-popup p {
+          font-size: 12px;
+        }
+
+        .call-option .phone {
           font-size: 14px;
+        }
+
+        .call-option .location {
+          font-size: 10px;
         }
 
         .logo {
@@ -1420,9 +1494,7 @@
         </div>
 
         <!-- Centered Hours Below Buttons -->
-        <div class="hours-text">
-          ⏰ M-F: 8AM-7PM | Sat-Sun: 8AM-5PM
-        </div>
+        <div class="hours-text">⏰ M-F: 8AM-7PM | Sat-Sun: 8AM-5PM</div>
       </div>
     </div>
 
@@ -1725,9 +1797,7 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 >
-                  <path
-                    d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"
-                  ></path>
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
                   <circle cx="9" cy="7" r="4"></circle>
                   <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
                   <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
@@ -1823,7 +1893,7 @@
               <a href="https://www.instagram.com/58alignments/" target="_blank">
                 <i class="fab fa-instagram"></i>
               </a>
-              
+              <a
                 href="https://www.youtube.com/channel/UCCSUwucAzYd33vTpuQZrjXw"
                 target="_blank"
               >
