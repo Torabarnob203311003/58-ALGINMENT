@@ -139,7 +139,7 @@
 
       .header-content {
         max-width: 1100px;
-        max-height: 140px;
+        max-height: 110px;
         margin: 0 auto;
         padding: 10px 20px;
         display: flex;
@@ -1448,8 +1448,283 @@
         }
       }
     </style>
+
+    <style>
+      /* Mobile-Only Desktop View Section */
+      .mobile-desktop-view {
+        display: none;
+      }
+
+      @media (max-width: 768px) {
+        .mobile-desktop-view {
+          display: block;
+          background: #f8f9fa;
+          padding: 60px 20px;
+        }
+
+        .mobile-desktop-view h1 {
+          font-size: 36px;
+          font-weight: 700;
+          color: #1a1a2e;
+          text-align: center;
+          margin-bottom: 10px;
+          font-family: 'Poppins', sans-serif;
+        }
+
+        .mobile-desktop-view p {
+          font-size: 18px;
+          color: #999;
+          text-align: center;
+          margin-bottom: 30px;
+          font-family: 'Poppins', sans-serif;
+        }
+
+        .mobile-desktop-preview {
+          background: white;
+          border-radius: 12px;
+          overflow: hidden;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+          margin-bottom: 30px;
+        }
+
+        .preview-header {
+          background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+          color: white;
+          padding: 30px 20px;
+          text-align: center;
+          border-radius: 10px 10px 0 0;
+        }
+
+        .preview-header h2 {
+          font-size: 28px;
+          margin-bottom: 8px;
+          font-family: 'Poppins', sans-serif;
+        }
+
+        .preview-header p {
+          font-size: 16px;
+          opacity: 0.9;
+          color: white;
+        }
+
+        .preview-header img {
+          max-width: 100px;
+          height: auto;
+          display: block;
+          margin: 0 auto;
+          object-fit: contain;
+          filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+        }
+
+        .preview-content {
+          padding: 20px;
+        }
+
+        .preview-locations {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 15px;
+          margin-bottom: 20px;
+        }
+
+        .preview-location {
+          background: #f8f9fa;
+          padding: 15px;
+          border-radius: 8px;
+          border-left: 3px solid #e74c3c;
+        }
+
+        .preview-location h3 {
+          font-size: 20px;
+          color: #1a1a2e;
+          margin-bottom: 10px;
+          font-family: 'Poppins', sans-serif;
+        }
+
+        .preview-location p {
+          font-size: 16px;
+          color: #666;
+          margin-bottom: 5px;
+          text-align: left;
+        }
+
+        .preview-location a {
+          color: #e74c3c;
+          text-decoration: none;
+          font-weight: 600;
+        }
+
+        .preview-pricing {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 12px;
+          margin-top: 20px;
+        }
+
+        .preview-price-item {
+          background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%) !important;
+          padding: 15px;
+          border-radius: 8px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          color: #1a1a2e !important;
+        }
+
+        .preview-price-item:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .preview-price-item.active {
+          background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%) !important;
+          color: white !important;
+        }
+
+        .preview-price-item.active div,
+        .preview-price-item.active .price-name,
+        .preview-price-item.active .price-amount {
+          color: white !important;
+        }
+
+        .preview-price-item.active div:not(.price-name) div {
+          color: rgba(255, 255, 255, 0.9) !important;
+        }
+
+        .preview-price-item:not(.active) {
+          background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%) !important;
+          color: #1a1a2e !important;
+        }
+
+        .preview-price-item:not(.active) div,
+        .preview-price-item:not(.active) .price-name,
+        .preview-price-item:not(.active) .price-amount {
+          color: inherit !important;
+        }
+
+        .price-name {
+          font-size: 18px;
+          font-weight: 600;
+          font-family: 'Poppins', sans-serif;
+        }
+
+        .price-amount {
+          font-size: 26px;
+          font-weight: 700;
+          font-family: 'Poppins', sans-serif;
+        }
+
+        .preview-price-item.featured .price-name,
+        .preview-price-item.featured .price-amount {
+          color: white;
+        }
+
+        .preview-cta {
+          margin-top: 20px;
+          text-align: center;
+        }
+
+        .preview-cta-button {
+          display: inline-block;
+          background: #e74c3c;
+          color: white;
+          padding: 14px 32px;
+          border-radius: 25px;
+          text-decoration: none;
+          font-weight: 700;
+          font-size: 16px;
+          font-family: 'Poppins', sans-serif;
+          margin: 5px;
+        }
+
+        .preview-cta-button:hover {
+          background: #c0392b;
+        }
+      }
+    </style>
   </head>
   <body>
+    <!-- Mobile-Only: Desktop View Section (Responsive Mobile) -->
+    <section class="mobile-desktop-view">
+      
+
+      <div class="mobile-desktop-preview">
+        
+
+        <div class="preview-content">
+          <!-- Locations in Mobile Format -->
+          <div class="preview-locations">
+            <div class="preview-location">
+              <h3>📍 Bakersfield, California</h3>
+              <p>📞 <a href="tel:6614140015">(661) 414-0015</a></p>
+              <p>4615 E Brundage Ln Unit 2</p>
+              <p>Bakersfield, CA 93307</p>
+              <p><strong>Hours:</strong> M-F 8AM-7PM | Sat-Sun 8AM-5PM</p>
+            </div>
+
+            <div class="preview-location">
+              <h3>📍 San Antonio, Texas</h3>
+              <p>📞 <a href="tel:2102541155">(210) 254-1155</a></p>
+              <p>9420 Green Rd Unit 4</p>
+              <p>Converse, TX 78109</p>
+              <p><strong>Hours:</strong> M-F 8AM-7PM | Sat-Sun 8AM-5PM</p>
+            </div>
+          </div>
+
+          <!-- Pricing in Mobile Format -->
+          <h3 style="font-size: 20px; font-weight: 600; margin: 20px 0 15px; color: #1a1a2e; font-family: 'Poppins', sans-serif;">💰 Pricing Details</h3>
+          <div class="preview-pricing">
+            <div class="preview-price-item" onclick="togglePriceSelection(this)">
+              <div style="flex: 1;">
+                <div style="font-weight: 700; color: #1a1a2e; font-size: 18px;">🚚 Truck Alignment</div>
+                <div style="font-size: 15px; color: #666; margin: 4px 0;">Semi-trucks & heavy-duty</div>
+                <div style="font-size: 15px; color: #666; margin-top: 6px;">✓ Laser precision<br/>✓ Same-day service</div>
+              </div>
+              <div style="text-align: right;">
+                <span class="price-amount" style="display: block;">$250</span>
+              </div>
+            </div>
+
+            <div class="preview-price-item" onclick="togglePriceSelection(this)">
+              <div style="flex: 1;">
+                <div style="font-weight: 700; color: #1a1a2e; font-size: 18px;">🚐 Trailer Alignment</div>
+                <div style="font-size: 15px; color: #666; margin: 4px 0;">RVs & dual axles</div>
+                <div style="font-size: 15px; color: #666; margin-top: 6px;">✓ Reduces tire wear<br/>✓ Better fuel economy</div>
+              </div>
+              <div style="text-align: right;">
+                <span class="price-amount" style="display: block;">$200</span>
+              </div>
+            </div>
+
+            <div class="preview-price-item featured" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color: white; padding: 15px;" onclick="togglePriceSelection(this)">
+              <div style="flex: 1;">
+                <div style="font-weight: 700; font-size: 18px; color: white;">🔧 Truck & Trailer</div>
+                <div style="font-size: 15px; color: rgba(255,255,255,0.9); margin: 4px 0;">Complete rig combo</div>
+                <div style="font-size: 15px; color: rgba(255,255,255,0.9); margin-top: 6px;">✓ Save $50!<br/>✓ Same day service</div>
+              </div>
+              <div style="text-align: right;">
+                <span style="display: block; font-size: 24px; font-weight: 700; color: white;">$400</span>
+                <span style="display: block; font-size: 13px; color: rgba(255,255,255,0.9);">✨ BEST VALUE</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Free Check Banner -->
+          <div style="background: #f39c12; color: white; padding: 15px; border-radius: 8px; margin-top: 15px; font-size: 16px; font-weight: 600; text-align: center; font-family: 'Poppins', sans-serif;">
+            🎯 FREE ALIGNMENT CHECK!
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="preview-cta">
+            <a href="tel:6614140015" class="preview-cta-button">Call Bakersfield</a>
+            <a href="tel:2102541155" class="preview-cta-button">Call San Antonio</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Top Bar with Dual Locations -->
     <div class="top-bar">
       <div class="top-bar-content">
@@ -1597,48 +1872,54 @@
 
       <div class="pricing-grid">
         <div class="pricing-card">
-          <h3>Truck Alignment</h3>
+          <h3>🚚 Truck Alignment</h3>
           <div class="price">$250</div>
           <div class="price-label">Competitive Rate</div>
+          <p style="font-size: 12px; color: #666; margin: 10px 0;">For semi-trucks and heavy-duty vehicles</p>
           <ul class="pricing-features">
-            <li>Complete Front-End Check</li>
-            <li>Hunter Laser Precision</li>
-            <li>Same-Day Service</li>
-            <li>Experienced Technicians</li>
+            <li>✓ Complete Front-End Check</li>
+            <li>✓ Hunter Laser Precision Equipment</li>
+            <li>✓ Same-Day Service Available</li>
+            <li>✓ Experienced Technicians</li>
+            <li>✓ Professional Diagnosis Report</li>
           </ul>
           <a href="tel:+16614140015" class="cta-button" style="width: 100%"
-            >Book Now</a
+            >📞 Book Now</a
           >
         </div>
 
         <div class="pricing-card">
-          <h3>Trailer Alignment</h3>
+          <h3>🚐 Trailer Alignment</h3>
           <div class="price">$200</div>
           <div class="price-label">Affordable & Precise</div>
+          <p style="font-size: 12px; color: #666; margin: 10px 0;">For trailers, RVs, and dual axles</p>
           <ul class="pricing-features">
-            <li>Axle Alignment Check</li>
-            <li>Reduces Tire Wear</li>
-            <li>Improves Fuel Economy</li>
-            <li>Professional Service</li>
+            <li>✓ Axle Alignment Check</li>
+            <li>✓ Reduces Tire Wear</li>
+            <li>✓ Improves Fuel Economy</li>
+            <li>✓ Professional Service</li>
+            <li>✓ Quick Turnaround Time</li>
           </ul>
           <a href="tel:+16614140015" class="cta-button" style="width: 100%"
-            >Book Now</a
+            >📞 Book Now</a
           >
         </div>
 
         <div class="pricing-card featured">
-          <span class="pricing-badge">⭐ BEST VALUE</span>
-          <h3>Truck & Trailer</h3>
+          <span class="pricing-badge">⭐ BEST VALUE - SAVE $50!</span>
+          <h3>🔧 Truck & Trailer Combo</h3>
           <div class="price">$400</div>
-          <div class="price-label">Save $50 Combo Deal</div>
+          <div class="price-label">Complete Rig Alignment</div>
+          <p style="font-size: 12px; color: #fff; margin: 10px 0; opacity: 0.9;">Get both done on the same day</p>
           <ul class="pricing-features">
-            <li>Complete Rig Alignment</li>
-            <li>Maximum Savings</li>
-            <li>Both Done Same Day</li>
-            <li>Priority Service</li>
+            <li>✓ Complete Rig Alignment</li>
+            <li>✓ Maximum Savings ($50 off)</li>
+            <li>✓ Both Done Same Day</li>
+            <li>✓ Priority Service</li>
+            <li>✓ Full Diagnostic Report</li>
           </ul>
-          <a href="tel:+16614140015" class="cta-button" style="width: 100%"
-            >Book Now</a
+          <a href="tel:+16614140015" class="cta-button" style="width: 100%; background: #fff; color: #e74c3c;"
+            >📞 Book Combo Deal</a
           >
         </div>
       </div>
@@ -2219,6 +2500,33 @@
           hamburger.classList.remove('active');
           mobileNav.classList.remove('active');
           body.style.overflow = 'auto';
+        }
+      });
+    </script>
+
+    <!-- Price Selection JavaScript -->
+    <script>
+      function togglePriceSelection(element) {
+        // Get all pricing items in the same container
+        const allItems = element.parentElement.querySelectorAll('.preview-price-item');
+        
+        // Remove active class from all items
+        allItems.forEach(item => {
+          item.classList.remove('active');
+        });
+        
+        // Add active class to clicked item
+        element.classList.add('active');
+      }
+      
+      // Set the featured (combo) as default active on page load
+      document.addEventListener('DOMContentLoaded', function() {
+        const pricingContainer = document.querySelector('.preview-pricing');
+        if (pricingContainer) {
+          const featuredItem = pricingContainer.querySelector('.preview-price-item.featured');
+          if (featuredItem) {
+            featuredItem.classList.add('active');
+          }
         }
       });
     </script>
